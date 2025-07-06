@@ -107,6 +107,7 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     padding: 120px 0 80px;
+    scroll-margin-top: 70px;
 }
 
 .hero-container {
@@ -236,6 +237,7 @@ body {
 .about {
     padding: 80px 0;
     background: #f8f9fa;
+    scroll-margin-top: 70px;
 }
 
 .about-content {
@@ -320,6 +322,7 @@ body {
 .projects {
     padding: 80px 0;
     background: white;
+    scroll-margin-top: 70px;
 }
 
 .projects-grid {
@@ -409,6 +412,7 @@ body {
 .contact {
     padding: 80px 0;
     background: #f8f9fa;
+    scroll-margin-top: 70px;
 }
 
 .contact-content {
