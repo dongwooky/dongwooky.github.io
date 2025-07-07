@@ -1558,6 +1558,18 @@ img {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+    
+    .contact {
+        padding: 60px 0;
+    }
+    
+    .contact-item {
+        padding: 1.2rem;
+    }
+    
+    .contact-form {
+        padding: 1.8rem;
+    }
 
     .footer .container {
         flex-direction: column;
@@ -1638,6 +1650,39 @@ img {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+    
+    /* Contact Section Mobile */
+    .contact {
+        padding: 60px 0 40px;
+    }
+    
+    .contact-content {
+        gap: 1.5rem;
+    }
+    
+    .contact-item {
+        padding: 1rem;
+        gap: 0.8rem;
+    }
+    
+    .contact-item i {
+        font-size: 1.5rem;
+        width: 50px;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem;
+        font-size: 0.9rem;
     }
 
 
