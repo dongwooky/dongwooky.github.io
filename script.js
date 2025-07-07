@@ -407,7 +407,7 @@ const scrollAnimationObserver = new IntersectionObserver(function(entries) {
 
 // Add scroll animations to various elements
 document.addEventListener('DOMContentLoaded', function() {
-    const animateElements = document.querySelectorAll('.project-card, .education-item, .publication-item, .award-item, .contact-item');
+    const animateElements = document.querySelectorAll('.project-card, .education-item, .publication-item, .award-item, .contact-item, .leadership-simple, .role-item, .overview-card');
     animateElements.forEach(el => {
         el.classList.add('animate-on-scroll');
         scrollAnimationObserver.observe(el);
@@ -417,6 +417,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.2}s`;
+    });
+    
+    // Add staggered animation delays for leadership items
+    const leadershipItems = document.querySelectorAll('.role-item');
+    leadershipItems.forEach((item, index) => {
+        item.style.animationDelay = `${index * 0.1}s`;
+    });
+    
+    // Add staggered animation delays for overview cards
+    const overviewCards = document.querySelectorAll('.overview-card');
+    overviewCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.15}s`;
     });
     
     // Add typewriter effect to hero title
@@ -445,6 +457,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalCaption = document.getElementById('modalCaption');
     const closeBtn = document.querySelector('.close');
     const clickableAwards = document.querySelectorAll('.clickable-award');
+    const clickableExperiences = document.querySelectorAll('.clickable-experience');
 
     // Open modal when award item is clicked
     clickableAwards.forEach(award => {
@@ -463,8 +476,35 @@ document.addEventListener('DOMContentLoaded', function() {
             
             img.onerror = function() {
                 // Show placeholder or error message if image doesn't exist
-                modalImage.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjlmOWY5Ii8+CiAgPHRleHQgeD0iNTAlIiB5PSI0NSUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzk5OTk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+7IiY7IOB7IKs7KeE7J2EIOykgOu5hO2VmOqzoCDsnojsirXri4jri6Q8L3RleHQ+CiAgPHRleHQgeD0iNTAlIiB5PSI2MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OTk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+YXdhcmRzL+2PtOuNlOyXkCDsmIjlp4nsnYQg7Iqs656r7ZW064uk64usLjwvdGV4dD4KPC9zdmc+';
+                modalImage.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjlmOWY5Ii8+CiAgPHRleHQgeD0iNTAlIiB5PSI0NSUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzk5OTk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+7IiY7IOB7IKs7KeE7J2EIOykgOu5hO2VmOqzoCDsnojsirXri4jri6Q8L3RleHQ+CiAgPHRleHQgeD0iNTAlIiB5PSI2MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OTk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+YXdhcmRzL+2PtOuNlOyXkCDsmIjlp4nsnYQg7Yq567OE7Juc7ISc7JqULjwvdGV4dD4KPC9zdmc+';
                 modalCaption.textContent = imageTitle + ' (수상 사진을 awards/ 폴더에 추가해주세요)';
+                modal.style.display = 'block';
+                setTimeout(() => modal.classList.add('show'), 10);
+            };
+            
+            img.src = imagePath;
+        });
+    });
+
+    // Open modal when experience item is clicked
+    clickableExperiences.forEach(experience => {
+        experience.addEventListener('click', function() {
+            const imagePath = this.getAttribute('data-exp-image');
+            const imageTitle = this.getAttribute('data-exp-title');
+            
+            // Check if image exists, if not show placeholder
+            const img = new Image();
+            img.onload = function() {
+                modalImage.src = imagePath;
+                modalCaption.textContent = imageTitle;
+                modal.style.display = 'block';
+                setTimeout(() => modal.classList.add('show'), 10);
+            };
+            
+            img.onerror = function() {
+                // Show placeholder or error message if image doesn't exist
+                modalImage.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjlmOWY5Ii8+CiAgPHRleHQgeD0iNTAlIiB5PSI0NSUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzk5OTk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+7JeF66y07IKs7KeE7J2EIOykgOu5hO2VmOqzoCDsirXri4jri6QuPC90ZXh0Pgo8L3N2Zz4=';
+                modalCaption.textContent = imageTitle + ' (업무 사진을 experiences/ 폴더에 추가해주세요)';
                 modal.style.display = 'block';
                 setTimeout(() => modal.classList.add('show'), 10);
             };
