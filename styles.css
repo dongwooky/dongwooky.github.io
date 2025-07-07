@@ -584,26 +584,7 @@ body {
     margin-top: 0;
 }
 
-.skills-section .skills h4 {
-    border-bottom: 2px solid #27ae60;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
-}
 
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.skill-tag {
-    background: #3498db;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    font-weight: 500;
-}
 
 /* Skill Bars */
 .skill-bars {
@@ -1909,15 +1890,7 @@ body.loaded {
     padding-bottom: 0.5rem;
 }
 
-/* Skills Section */
-.skills-section {
-    background: #f8f9fa;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-left: 4px solid #27ae60;
-    margin-bottom: 2rem;
-}
+
 
 /* Education Timeline */
 .education-timeline {
@@ -2299,8 +2272,7 @@ body.loaded {
         grid-template-columns: 1fr;
     }
     
-    .education-section,
-    .skills-section {
+    .education-section {
         margin-bottom: 1.5rem;
         padding: 1.5rem;
     }

@@ -307,11 +307,7 @@ const skillObserver = new IntersectionObserver(function(entries) {
     });
 }, { threshold: 0.5 });
 
-// Observe skills section
-const skillsSection = document.querySelector('.skills-section');
-if (skillsSection) {
-    skillObserver.observe(skillsSection);
-}
+
 
 // Counter animation for stats
 function animateCounters() {
