@@ -76,7 +76,7 @@ const observer = new IntersectionObserver(function(entries) {
 }, observerOptions);
 
 // Observe elements for animation
-document.querySelectorAll('.project-card, .stat-item, .contact-item').forEach(el => {
+document.querySelectorAll('.project-card, .contact-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -315,7 +315,7 @@ if (skillsSection) {
 
 // Counter animation for stats
 function animateCounters() {
-    const counters = document.querySelectorAll('.stat-item span');
+    const counters = document.querySelectorAll('.stat .number');
     
     counters.forEach(counter => {
         const target = counter.textContent;
@@ -350,7 +350,7 @@ const statsObserver = new IntersectionObserver(function(entries) {
 }, { threshold: 0.5 });
 
 // Observe stats section
-const statsSection = document.querySelector('.about-stats');
+const statsSection = document.querySelector('.stats-grid');
 if (statsSection) {
     statsObserver.observe(statsSection);
 }

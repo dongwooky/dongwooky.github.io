@@ -696,44 +696,11 @@ body {
     animation: slideInFromRight 0.6s ease forwards;
 }
 
-.about-stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+.about .overview-grid {
     margin-bottom: 3rem;
 }
 
-.stat-item {
-    text-align: center;
-    padding: 1.2rem 0.8rem;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
-}
 
-.stat-item:hover {
-    transform: translateY(-3px);
-}
-
-.stat-item i {
-    font-size: 1.8rem;
-    color: #3498db;
-    margin-bottom: 0.6rem;
-}
-
-.stat-item h4 {
-    font-size: 0.9rem;
-    color: #2c3e50;
-    margin-bottom: 0.3rem;
-    font-weight: 500;
-}
-
-.stat-item span {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #3498db;
-}
 
 /* Projects Section */
 .projects {
@@ -1589,14 +1556,7 @@ img {
         display: block;
     }
 
-    .about-stats {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.8rem;
-    }
 
-    .stat-item {
-        padding: 1rem 0.6rem;
-    }
 
     .contact-content {
         grid-template-columns: 1fr;
@@ -1680,26 +1640,7 @@ img {
         grid-template-columns: 1fr;
     }
 
-    .about-stats {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.6rem;
-    }
 
-    .stat-item {
-        padding: 0.8rem 0.5rem;
-    }
-
-    .stat-item i {
-        font-size: 1.5rem;
-    }
-
-    .stat-item h4 {
-        font-size: 0.8rem;
-    }
-
-    .stat-item span {
-        font-size: 1.3rem;
-    }
     
     /* Leadership Mobile Small Screen */
     .leadership-simple {
