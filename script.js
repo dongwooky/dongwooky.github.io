@@ -112,7 +112,7 @@ window.addEventListener('load', () => {
 const heroAvatar = document.querySelector('.hero-avatar');
 if (heroAvatar) {
     setInterval(() => {
-        heroAvatar.style.transform = 'translateY(-10px)';
+        heroAvatar.style.transform = 'translateY(-5px)';
         setTimeout(() => {
             heroAvatar.style.transform = 'translateY(0)';
         }, 1000);
