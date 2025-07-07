@@ -700,38 +700,39 @@ body {
 }
 
 .about-stats {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
 }
 
 .stat-item {
     text-align: center;
-    padding: 2rem;
+    padding: 1.2rem 0.8rem;
     background: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
 }
 
 .stat-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 .stat-item i {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     color: #3498db;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
 }
 
 .stat-item h4 {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     color: #2c3e50;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
 }
 
 .stat-item span {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #3498db;
 }
@@ -1592,13 +1593,12 @@ img {
     }
 
     .about-stats {
-        flex-direction: row;
-        justify-content: space-around;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
     }
 
     .stat-item {
-        flex: 1;
-        margin: 0 0.5rem;
+        padding: 1rem 0.6rem;
     }
 
     .contact-content {
@@ -1684,11 +1684,24 @@ img {
     }
 
     .about-stats {
-        flex-direction: column;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.6rem;
     }
 
     .stat-item {
-        margin: 0;
+        padding: 0.8rem 0.5rem;
+    }
+
+    .stat-item i {
+        font-size: 1.5rem;
+    }
+
+    .stat-item h4 {
+        font-size: 0.8rem;
+    }
+
+    .stat-item span {
+        font-size: 1.3rem;
     }
     
     /* Leadership Mobile Small Screen */
