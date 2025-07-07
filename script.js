@@ -119,14 +119,14 @@ if (heroAvatar) {
     }, 2000);
 }
 
-// Add parallax effect to hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        hero.style.transform = `translateY(${scrolled * 0.3}px)`;
-    }
-});
+// Add parallax effect to hero section (disabled to prevent overlap)
+// window.addEventListener('scroll', () => {
+//     const scrolled = window.pageYOffset;
+//     const hero = document.querySelector('.hero');
+//     if (hero) {
+//         hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+//     }
+// });
 
 // Add click effect to buttons
 document.querySelectorAll('.btn').forEach(button => {
