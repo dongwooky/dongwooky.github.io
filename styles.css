@@ -557,10 +557,7 @@ body {
 }
 
 .about-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 4rem;
-    align-items: start;
+    display: block;
 }
 
 .about-text h3 {
@@ -703,6 +700,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+    margin-bottom: 3rem;
 }
 
 .stat-item {
@@ -1588,8 +1586,7 @@ img {
     }
 
     .about-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        display: block;
     }
 
     .about-stats {
