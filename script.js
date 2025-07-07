@@ -238,4 +238,206 @@ backToTopBtn.addEventListener('click', () => {
 // Add loading animation
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
+});
+
+
+
+// CV Download functionality
+document.getElementById('downloadCV').addEventListener('click', async (e) => {
+    e.preventDefault();
+    
+    try {
+        // Fetch the PDF file
+        const response = await fetch('Dongwook_Kwon_Resume.pdf');
+        
+        if (!response.ok) {
+            throw new Error('Failed to fetch PDF file');
+        }
+        
+        // Convert to blob
+        const blob = await response.blob();
+        
+        // Create download link
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Dongwook_Kwon_Resume.pdf';
+        
+        // Append to body, click, and remove
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        
+        // Clean up
+        window.URL.revokeObjectURL(url);
+        
+        // Show notification
+        showNotification('CV downloaded successfully!');
+        
+    } catch (error) {
+        console.error('Error downloading CV:', error);
+        
+        // Fallback: try direct link
+        const a = document.createElement('a');
+        a.href = 'Dongwook_Kwon_Resume.pdf';
+        a.download = 'Dongwook_Kwon_Resume.pdf';
+        a.target = '_blank';
+        
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        
+        showNotification('CV download initiated!');
+    }
+});
+
+// Skill bar animation
+function animateSkillBars() {
+    const skillBars = document.querySelectorAll('.skill-progress');
+    
+    skillBars.forEach(bar => {
+        const targetWidth = bar.getAttribute('data-width');
+        bar.style.width = targetWidth + '%';
+    });
+}
+
+// Intersection Observer for skill bars
+const skillObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateSkillBars();
+            skillObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+// Observe skills section
+const skillsSection = document.querySelector('.skills-section');
+if (skillsSection) {
+    skillObserver.observe(skillsSection);
+}
+
+// Counter animation for stats
+function animateCounters() {
+    const counters = document.querySelectorAll('.stat-item span');
+    
+    counters.forEach(counter => {
+        const target = counter.textContent;
+        const numericValue = parseInt(target.replace(/\D/g, ''));
+        const suffix = target.replace(/\d/g, '');
+        
+        if (numericValue) {
+            let current = 0;
+            const increment = numericValue / 50;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= numericValue) {
+                    counter.textContent = numericValue + suffix;
+                    clearInterval(timer);
+                } else {
+                    counter.textContent = Math.floor(current) + suffix;
+                }
+            }, 30);
+        }
+    });
+}
+
+// Intersection Observer for stats
+const statsObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            statsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+// Observe stats section
+const statsSection = document.querySelector('.about-stats');
+if (statsSection) {
+    statsObserver.observe(statsSection);
+}
+
+// Notification system
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.textContent = message;
+    notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        background: #27ae60;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+        z-index: 9999;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 0.3s ease;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.opacity = '1';
+        notification.style.transform = 'translateX(0)';
+    }, 100);
+    
+    setTimeout(() => {
+        notification.style.opacity = '0';
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+            document.body.removeChild(notification);
+        }, 300);
+    }, 3000);
+}
+
+// Enhanced scroll animations
+const scrollAnimationOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const scrollAnimationObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, scrollAnimationOptions);
+
+// Add scroll animations to various elements
+document.addEventListener('DOMContentLoaded', function() {
+    const animateElements = document.querySelectorAll('.project-card, .education-item, .publication-item, .award-item, .contact-item');
+    animateElements.forEach(el => {
+        el.classList.add('animate-on-scroll');
+        scrollAnimationObserver.observe(el);
+    });
+    
+    // Add staggered animation delays
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.2}s`;
+    });
+    
+    // Add typewriter effect to hero title
+    const heroTitle = document.querySelector('.hero-title');
+    if (heroTitle) {
+        const text = heroTitle.textContent;
+        heroTitle.textContent = '';
+        let i = 0;
+        
+        function typeWriter() {
+            if (i < text.length) {
+                heroTitle.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        
+        setTimeout(typeWriter, 500);
+    }
 }); 

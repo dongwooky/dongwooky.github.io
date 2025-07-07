@@ -44,6 +44,9 @@
                     <a href="#experience" class="nav-link">Experience</a>
                 </li>
                 <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
                     <a href="#research" class="nav-link">Research</a>
                 </li>
                 <li class="nav-item">
@@ -73,6 +76,9 @@
                 <div class="hero-buttons">
                     <a href="#about" class="btn btn-primary">Learn More</a>
                     <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                    <a href="#" class="btn btn-outline" id="downloadCV">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
                 </div>
             </div>
             <div class="hero-image">
@@ -121,15 +127,52 @@
                                 <span class="skill-tag">IoT Security</span>
                             </div>
                             <h4>Technical Skills</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">TensorFlow</span>
-                                <span class="skill-tag">PyTorch</span>
-                                <span class="skill-tag">Scikit-learn</span>
-                                <span class="skill-tag">OpenCV</span>
-                                <span class="skill-tag">MATLAB</span>
-                                <span class="skill-tag">R</span>
-                                <span class="skill-tag">Git</span>
+                            <div class="skill-bars">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>Python</span>
+                                        <span>95%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="95"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>TensorFlow/PyTorch</span>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="90"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>Machine Learning</span>
+                                        <span>92%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="92"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>MATLAB</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="85"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span>OpenCV</span>
+                                        <span>80%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="80"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -160,11 +203,75 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="projects">
+    <!-- Work Experience Section -->
+    <section class="experience" id="experience">
         <div class="container">
             <div class="section-header">
-                <h2>Experience</h2>
+                <h2>Work Experience</h2>
+                <p>My professional journey and research experiences</p>
+            </div>
+            
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span class="status-badge active">Current</span>
+                        <h4>Jan 2025 – Present</h4>
+                    </div>
+                    <div class="experience-content">
+                        <h3>Research Project</h3>
+                        <h4>LG Electronics Canada</h4>
+                        <p class="location">Toronto, Ontario, Canada</p>
+                        <p>Conducting advanced research in AI and machine learning applications for consumer electronics and smart devices.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span class="status-badge active">Current</span>
+                        <h4>Aug 2021 – Present</h4>
+                    </div>
+                    <div class="experience-content">
+                        <h3>Research Assistant</h3>
+                        <h4>Bio-Computing and Machine Learning Laboratory</h4>
+                        <p class="location">Kwangwoon University, Seoul, South Korea</p>
+                        <p>Leading research initiatives in bio-computing applications, developing machine learning models for medical device anomaly detection, and contributing to multiple high-impact publications.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span class="status-badge completed">Completed</span>
+                        <h4>Jul 2022 – Aug 2022</h4>
+                    </div>
+                    <div class="experience-content">
+                        <h3>AI Development Project</h3>
+                        <h4>Qualcomm Institute</h4>
+                        <p class="location">University of California, San Diego</p>
+                        <p>Summer internship focusing on AI development projects, working on cutting-edge research in wireless communication and signal processing applications.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span class="status-badge completed">Completed</span>
+                        <h4>Feb 2021 – Dec 2021</h4>
+                    </div>
+                    <div class="experience-content">
+                        <h3>Development Project</h3>
+                        <h4>SK Telecom</h4>
+                        <p class="location">Seoul, South Korea</p>
+                        <p>Participated in telecommunications development projects, contributing to innovative solutions in mobile network optimization and data analytics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projects</h2>
                 <p>Research and industry experience in AI and machine learning</p>
             </div>
             <div class="projects-grid">
@@ -180,6 +287,11 @@
                             <span>AI</span>
                             <span>Machine Learning</span>
                             <span>Evaluation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -197,6 +309,11 @@
                             <span>Anomaly Detection</span>
                             <span>Security</span>
                         </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -212,6 +329,14 @@
                             <span>IoT Security</span>
                             <span>Medical AI</span>
                             <span>Cybersecurity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Paper
+                            </a>
                         </div>
                     </div>
                 </div>
