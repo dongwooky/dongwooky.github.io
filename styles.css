@@ -264,6 +264,11 @@ body {
     font-size: 1.3rem;
     color: #2c3e50;
     margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.skills h4:first-child {
+    margin-top: 0;
 }
 
 .skill-tags {
@@ -365,6 +370,29 @@ body {
     font-size: 1.5rem;
     color: #2c3e50;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.status-badge {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.active {
+    background: #27ae60;
+    color: white;
+}
+
+.status-badge.completed {
+    background: #95a5a6;
+    color: white;
 }
 
 .project-content p {
@@ -646,6 +674,16 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Loading animation */
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
@@ -662,6 +700,37 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #2980b9;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.back-to-top:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Education Items */

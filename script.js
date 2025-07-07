@@ -213,4 +213,29 @@ activeStyle.textContent = `
         width: 100% !important;
     }
 `;
-document.head.appendChild(activeStyle); 
+document.head.appendChild(activeStyle);
+
+// Back to Top Button functionality
+const backToTopBtn = document.getElementById('backToTop');
+
+// Show/hide back to top button
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+    } else {
+        backToTopBtn.classList.remove('visible');
+    }
+});
+
+// Scroll to top when button is clicked
+backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Add loading animation
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+}); 
