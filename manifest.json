@@ -1,0 +1,68 @@
+{
+    "name": "Dongwook Kwon - AI Researcher Portfolio",
+    "short_name": "DK Portfolio",
+    "description": "AI Researcher and Graduate Student at University of Toronto specializing in Machine Learning, Anomaly Detection, and Medical AI.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#667eea",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "en",
+    "categories": ["education", "portfolio", "research"],
+    "icons": [
+        {
+            "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><circle cx='96' cy='96' r='96' fill='%23667eea'/><text x='96' y='120' font-size='80' text-anchor='middle' fill='white' font-family='Arial, sans-serif'>DK</text></svg>",
+            "sizes": "192x192",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><circle cx='256' cy='256' r='256' fill='%23667eea'/><text x='256' y='320' font-size='200' text-anchor='middle' fill='white' font-family='Arial, sans-serif'>DK</text></svg>",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "About",
+            "short_name": "About",
+            "description": "Learn more about Dongwook Kwon",
+            "url": "/#about",
+            "icons": [
+                {
+                    "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><circle cx='48' cy='48' r='48' fill='%233498db'/><text x='48' y='60' font-size='40' text-anchor='middle' fill='white'>ℹ</text></svg>",
+                    "sizes": "96x96",
+                    "type": "image/svg+xml"
+                }
+            ]
+        },
+        {
+            "name": "Research",
+            "short_name": "Research",
+            "description": "View research publications and awards",
+            "url": "/#research",
+            "icons": [
+                {
+                    "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><circle cx='48' cy='48' r='48' fill='%2327ae60'/><text x='48' y='60' font-size='40' text-anchor='middle' fill='white'>📚</text></svg>",
+                    "sizes": "96x96",
+                    "type": "image/svg+xml"
+                }
+            ]
+        },
+        {
+            "name": "Contact",
+            "short_name": "Contact",
+            "description": "Get in touch with Dongwook Kwon",
+            "url": "/#contact",
+            "icons": [
+                {
+                    "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><circle cx='48' cy='48' r='48' fill='%23e67e22'/><text x='48' y='60' font-size='40' text-anchor='middle' fill='white'>📧</text></svg>",
+                    "sizes": "96x96",
+                    "type": "image/svg+xml"
+                }
+            ]
+        }
+    ]
+} 

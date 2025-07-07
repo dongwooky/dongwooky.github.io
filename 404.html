@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Dongwook Kwon</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Return to Dongwook Kwon's portfolio homepage.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://dongwooky.github.io">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        
+        .error-container {
+            max-width: 600px;
+            padding: 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #ffd700, #ffed4a, #ffd700);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 2s ease-in-out infinite;
+        }
+        
+        .error-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+        
+        .error-message {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+        
+        .search-form {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .search-input {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #ffd700;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+        }
+        
+        .floating-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .shape:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: -2s;
+        }
+        
+        .shape:nth-child(2) {
+            top: 60%;
+            right: 10%;
+            animation-delay: -1s;
+        }
+        
+        .shape:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: -3s;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes shimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            
+            .error-title {
+                font-size: 2rem;
+            }
+            
+            .error-message {
+                font-size: 1rem;
+            }
+            
+            .error-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                padding: 10px 25px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape">
+            <i class="fas fa-brain" style="font-size: 3rem;"></i>
+        </div>
+        <div class="shape">
+            <i class="fas fa-robot" style="font-size: 2.5rem;"></i>
+        </div>
+        <div class="shape">
+            <i class="fas fa-graduation-cap" style="font-size: 3.5rem;"></i>
+        </div>
+    </div>
+    
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Page Not Found</h1>
+        <p class="error-message">
+            Oops! The page you're looking for seems to have vanished into the digital void. 
+            Perhaps it's been optimized away by our AI algorithms! 🤖
+        </p>
+        
+        <div class="error-actions">
+            <a href="/" class="btn btn-primary">
+                <i class="fas fa-home"></i>
+                Go Home
+            </a>
+            <button onclick="history.back()" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i>
+                Go Back
+            </button>
+        </div>
+        
+        <div class="search-form">
+            <h3 style="margin-bottom: 1rem; opacity: 0.9;">Looking for something specific?</h3>
+            <input type="text" class="search-input" placeholder="Search the site..." id="siteSearch" onkeypress="handleSearch(event)">
+            <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 0.5rem;">
+                Try searching for: "about", "research", "projects", "contact", or "awards"
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        function handleSearch(event) {
+            if (event.key === 'Enter') {
+                const query = event.target.value.toLowerCase().trim();
+                const searchMappings = {
+                    'about': '/#about',
+                    'research': '/#research',
+                    'publications': '/#research',
+                    'awards': '/#research',
+                    'projects': '/#projects',
+                    'contact': '/#contact',
+                    'experience': '/#experience',
+                    'education': '/#about',
+                    'cv': '/#about',
+                    'resume': '/#about'
+                };
+                
+                // Check for direct matches
+                if (searchMappings[query]) {
+                    window.location.href = searchMappings[query];
+                    return;
+                }
+                
+                // Check for partial matches
+                for (const [key, value] of Object.entries(searchMappings)) {
+                    if (query.includes(key) || key.includes(query)) {
+                        window.location.href = value;
+                        return;
+                    }
+                }
+                
+                // If no match found, go to homepage
+                window.location.href = '/';
+            }
+        }
+        
+        // Auto-focus search input
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('siteSearch').focus();
+        });
+        
+        // Add some analytics for 404 errors (optional)
+        if (typeof gtag === 'function') {
+            gtag('event', 'page_view', {
+                page_title: '404 Error',
+                page_location: window.location.href
+            });
+        }
+    </script>
+</body>
+</html> 

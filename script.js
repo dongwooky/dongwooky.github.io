@@ -83,29 +83,10 @@ document.querySelectorAll('.project-card, .stat-item, .contact-item').forEach(el
     observer.observe(el);
 });
 
-// Add typing effect to hero title
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    
-    type();
-}
-
-// Initialize typing effect on page load
+// Simple initialization
 window.addEventListener('load', () => {
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const originalText = heroTitle.textContent;
-        typeWriter(heroTitle, originalText, 80);
-    }
+    // Page is fully loaded
+    console.log('Page loaded successfully');
 });
 
 // Add floating animation to hero avatar
@@ -237,7 +218,22 @@ backToTopBtn.addEventListener('click', () => {
 
 // Add loading animation
 window.addEventListener('load', () => {
-    document.body.classList.add('loaded');
+    const pageLoader = document.getElementById('pageLoader');
+    
+    // Hide loader with animation
+    setTimeout(() => {
+        if (pageLoader) {
+            pageLoader.classList.add('hidden');
+        }
+        document.body.classList.add('loaded');
+        
+        // Remove loader from DOM after animation
+        setTimeout(() => {
+            if (pageLoader && pageLoader.parentNode) {
+                pageLoader.parentNode.removeChild(pageLoader);
+            }
+        }, 500);
+    }, 800); // Show loader for minimum 800ms
 });
 
 
@@ -440,4 +436,186 @@ document.addEventListener('DOMContentLoaded', function() {
         
         setTimeout(typeWriter, 500);
     }
-}); 
+});
+
+// Award Modal Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('awardModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalCaption = document.getElementById('modalCaption');
+    const closeBtn = document.querySelector('.close');
+    const clickableAwards = document.querySelectorAll('.clickable-award');
+
+    // Open modal when award item is clicked
+    clickableAwards.forEach(award => {
+        award.addEventListener('click', function() {
+            const imagePath = this.getAttribute('data-award-image');
+            const imageTitle = this.getAttribute('data-award-title');
+            
+            // Check if image exists, if not show placeholder
+            const img = new Image();
+            img.onload = function() {
+                modalImage.src = imagePath;
+                modalCaption.textContent = imageTitle;
+                modal.style.display = 'block';
+                setTimeout(() => modal.classList.add('show'), 10);
+            };
+            
+            img.onerror = function() {
+                // Show placeholder or error message if image doesn't exist
+                modalImage.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjlmOWY5Ii8+CiAgPHRleHQgeD0iNTAlIiB5PSI0NSUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzk5OTk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+7IiY7IOB7IKs7KeE7J2EIOykgOu5hO2VmOqzoCDsnojsirXri4jri6Q8L3RleHQ+CiAgPHRleHQgeD0iNTAlIiB5PSI2MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OTk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+YXdhcmRzL+2PtOuNlOyXkCDsmIjlp4nsnYQg7Iqs656r7ZW064uk64usLjwvdGV4dD4KPC9zdmc+';
+                modalCaption.textContent = imageTitle + ' (수상 사진을 awards/ 폴더에 추가해주세요)';
+                modal.style.display = 'block';
+                setTimeout(() => modal.classList.add('show'), 10);
+            };
+            
+            img.src = imagePath;
+        });
+    });
+
+    // Close modal when X button is clicked
+    closeBtn.addEventListener('click', function() {
+        modal.classList.remove('show');
+        setTimeout(() => modal.style.display = 'none', 300);
+    });
+
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.classList.remove('show');
+            setTimeout(() => modal.style.display = 'none', 300);
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+            modal.classList.remove('show');
+            setTimeout(() => modal.style.display = 'none', 300);
+        }
+    });
+});
+
+// Contact Form Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            
+            const btnText = this.querySelector('.btn-text');
+            const btnLoading = this.querySelector('.btn-loading');
+            const submitBtn = this.querySelector('button[type="submit"]');
+            
+            // Show loading state
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline-flex';
+            submitBtn.disabled = true;
+            
+            // Create mailto link with form data
+            const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+            const mailtoLink = `mailto:dongwook.kwon@mail.utoronto.ca?subject=${subject}&body=${body}`;
+            
+            // Simulate processing time
+            setTimeout(() => {
+                // Open email client
+                window.location.href = mailtoLink;
+                
+                // Reset form
+                this.reset();
+                
+                // Show success message
+                showNotification('Email client opened! Thank you for reaching out.', 'success');
+                
+                // Reset button state
+                btnText.style.display = 'inline';
+                btnLoading.style.display = 'none';
+                submitBtn.disabled = false;
+                
+            }, 1500);
+        });
+    }
+});
+
+// Service Worker Registration for PWA functionality
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+                console.log('Service Worker registered successfully:', registration.scope);
+                
+                // Check for updates
+                registration.addEventListener('updatefound', () => {
+                    const newWorker = registration.installing;
+                    newWorker.addEventListener('statechange', () => {
+                        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                            // New content is available, show update notification
+                            showNotification('New version available! Refresh to update.');
+                        }
+                    });
+                });
+            })
+            .catch((error) => {
+                console.log('Service Worker registration failed:', error);
+            });
+    });
+}
+
+// Enhanced notification function
+function showNotification(message, type = 'success') {
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.innerHTML = `
+        <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
+        <span>${message}</span>
+    `;
+    
+    const colors = {
+        success: '#27ae60',
+        error: '#e74c3c',
+        info: '#3498db'
+    };
+    
+    notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        background: ${colors[type] || colors.success};
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        max-width: 350px;
+        font-weight: 500;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.opacity = '1';
+        notification.style.transform = 'translateX(0)';
+    }, 100);
+    
+    setTimeout(() => {
+        notification.style.opacity = '0';
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+            if (document.body.contains(notification)) {
+                document.body.removeChild(notification);
+            }
+        }, 300);
+    }, 4000);
+} 
