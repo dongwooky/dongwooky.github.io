@@ -309,29 +309,37 @@ const skillObserver = new IntersectionObserver(function(entries) {
 
 
 
-// Counter animation for stats
+// Enhanced Counter animation for stats
 function animateCounters() {
-    const counters = document.querySelectorAll('.stat .number');
+    const counters = document.querySelectorAll('.stat .number[data-target]');
     
     counters.forEach(counter => {
-        const target = counter.textContent;
-        const numericValue = parseInt(target.replace(/\D/g, ''));
-        const suffix = target.replace(/\d/g, '');
+        const target = parseInt(counter.getAttribute('data-target'));
+        const duration = 2000; // 2 seconds
+        const startTime = Date.now();
         
-        if (numericValue) {
-            let current = 0;
-            const increment = numericValue / 50;
+        function updateCounter() {
+            const elapsed = Date.now() - startTime;
+            const progress = Math.min(elapsed / duration, 1);
             
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= numericValue) {
-                    counter.textContent = numericValue + suffix;
-                    clearInterval(timer);
-                } else {
-                    counter.textContent = Math.floor(current) + suffix;
-                }
-            }, 30);
+            // Easing function for smooth animation
+            const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+            const current = Math.floor(easeOutQuart * target);
+            
+            counter.textContent = current;
+            
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target;
+            }
         }
+        
+        // Add a small delay for staggered effect
+        const delay = [...counters].indexOf(counter) * 200;
+        setTimeout(() => {
+            updateCounter();
+        }, delay);
     });
 }
 
