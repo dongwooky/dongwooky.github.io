@@ -566,28 +566,42 @@ body {
 }
 
 .country-flag.canada {
-    background: linear-gradient(135deg, #ff0000 0%, #ffffff 50%, #ff0000 100%);
+    background: #ffffff;
+    border: 2px solid #e8f4fd;
+    box-shadow: 0 0 0 1px rgba(255, 107, 107, 0.1);
 }
 
 .country-flag.canada::before {
-    background: #ff0000;
+    background: rgba(255, 107, 107, 0.05);
 }
 
 .country-flag.usa {
-    background: linear-gradient(135deg, #002868 0%, #ffffff 50%, #bf0a30 100%);
+    background: #ffffff;
+    border: 2px solid #e8f4fd;
+    box-shadow: 0 0 0 1px rgba(74, 144, 226, 0.1);
 }
 
 .country-flag.usa::before {
-    background: #002868;
+    background: rgba(74, 144, 226, 0.05);
 }
 
 .country-flag:hover {
-    transform: scale(1.15);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.country-flag.canada:hover {
+    border-color: rgba(255, 107, 107, 0.3);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.15);
+}
+
+.country-flag.usa:hover {
+    border-color: rgba(74, 144, 226, 0.3);
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.15);
 }
 
 .country-flag:hover::before {
-    opacity: 0.15;
+    opacity: 0.1;
 }
 
 /* Add subtle animation */
