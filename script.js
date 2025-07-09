@@ -663,3 +663,45 @@ function showNotification(message, type = 'success') {
         }, 300);
     }, 4000);
 } 
+
+// Accordion functionality for mobile experience section
+function initAccordion() {
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    
+    accordionItems.forEach(item => {
+        const toggleButton = item.querySelector('.accordion-toggle');
+        
+        if (toggleButton) {
+            toggleButton.addEventListener('click', (e) => {
+                // Prevent event bubbling to avoid triggering image modal
+                e.stopPropagation();
+                
+                // Only enable accordion on mobile
+                if (window.innerWidth <= 768) {
+                    // Close all other accordion items
+                    accordionItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                }
+            });
+        }
+    });
+}
+
+// Initialize accordion when DOM is loaded
+document.addEventListener('DOMContentLoaded', initAccordion);
+
+// Re-initialize on window resize to handle desktop/mobile transition
+window.addEventListener('resize', () => {
+    // Remove active class on desktop
+    if (window.innerWidth > 768) {
+        document.querySelectorAll('.accordion-item').forEach(item => {
+            item.classList.remove('active');
+        });
+    }
+}); 
