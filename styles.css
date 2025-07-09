@@ -818,18 +818,20 @@ body {
     scroll-margin-top: 100px;
     position: relative;
     z-index: 2;
+    overflow: visible;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    overflow: visible;
 }
 
 .project-card {
     background: white;
     border-radius: 15px;
-    overflow: hidden;
+    overflow: visible;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
@@ -854,6 +856,7 @@ body {
 
 .project-content {
     padding: 2rem;
+    overflow: visible;
 }
 
 .project-content .status-badge {
@@ -1528,6 +1531,18 @@ img {
         margin-bottom: 0.6rem;
         font-size: 0.65rem;
         padding: 0.25rem 0.7rem;
+    }
+
+    .projects-grid {
+        overflow: visible !important;
+    }
+
+    .project-card {
+        overflow: visible !important;
+    }
+
+    .project-content {
+        overflow: visible !important;
     }
     
     /* Experience Section Mobile */
