@@ -2534,7 +2534,7 @@ body.loaded {
 .patent-item h4,
 .award-item h4 {
     color: #2c3e50;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     margin-bottom: 0.5rem;
 }
 
@@ -2542,19 +2542,38 @@ body.loaded {
 .patent-item p,
 .award-item p {
     color: #666;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .publication-item .authors {
     color: #7f8c8d;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     margin-top: 0.5rem;
     line-height: 1.4;
+    background: rgba(52, 152, 219, 0.05);
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    border-left: 3px solid #3498db;
 }
 
 .publication-item .authors strong {
-    color: #2c3e50;
-    font-weight: 600;
+    color: #3498db;
+    font-weight: 700;
+    background: rgba(52, 152, 219, 0.15);
+    padding: 0.1rem 0.3rem;
+    border-radius: 4px;
+}
+
+/* Patents Section Styling - Desktop */
+.patent-item p {
+    color: #666;
+    font-size: 0.8rem;
+    background: rgba(52, 152, 219, 0.05);
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    border-left: 3px solid #3498db;
+    font-family: 'Courier New', monospace;
+    font-weight: 500;
 }
 
 /* Awards Section Styling */
@@ -2613,7 +2632,7 @@ body.loaded {
 
 .award-info h4 {
     color: #2c3e50;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 0 0 0.5rem 0;
     font-weight: 600;
     line-height: 1.3;
@@ -2621,14 +2640,14 @@ body.loaded {
 
 .award-info h5 {
     color: #3498db;
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin: 0 0 0.5rem 0;
     font-weight: 500;
 }
 
 .award-year {
     color: #e67e22;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
     margin: 0;
     background: rgba(230, 126, 34, 0.1);
@@ -2704,7 +2723,7 @@ body.loaded {
         top: 0;
         bottom: 0;
         width: 2px;
-        background: linear-gradient(to bottom, #e67e22, #f39c12);
+        background: linear-gradient(to bottom, #3498db, #2980b9);
         z-index: 0;
     }
 
@@ -2715,7 +2734,7 @@ body.loaded {
         padding: 1.5rem !important;
         border-radius: 12px !important;
         box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08) !important;
-        border-left: 4px solid #e67e22 !important;
+        border-left: 4px solid #3498db !important;
         margin-bottom: 0 !important;
         padding-left: 50px !important;
         position: relative;
@@ -2728,10 +2747,10 @@ body.loaded {
         top: 0.5rem;
         width: 12px;
         height: 12px;
-        background: #e67e22;
+        background: #3498db;
         border: 3px solid white;
         border-radius: 50%;
-        box-shadow: 0 2px 6px rgba(230, 126, 34, 0.3);
+        box-shadow: 0 2px 6px rgba(52, 152, 219, 0.3);
         z-index: 1;
     }
 
@@ -2759,21 +2778,21 @@ body.loaded {
     }
     
     .award-info h4 {
-        font-size: 1.1rem;
+        font-size: 0.95rem;
         margin: 0 0 0.3rem 0;
-        color: #e67e22;
+        color: #3498db;
         font-weight: 600;
     }
     
     .award-info h5 {
-        font-size: 0.95rem;
+        font-size: 0.8rem;
         margin: 0 0 0.5rem 0;
         color: #3498db;
         font-weight: 500;
     }
     
     .award-year {
-        font-size: 0.85rem;
+        font-size: 0.7rem;
         margin: 0;
         padding: 0.2rem 0.6rem;
     }
@@ -2793,7 +2812,7 @@ body.loaded {
         top: 0;
         bottom: 0;
         width: 2px;
-        background: linear-gradient(to bottom, #8e44ad, #9b59b6);
+        background: linear-gradient(to bottom, #3498db, #2980b9);
         z-index: 0;
     }
 
@@ -2804,7 +2823,7 @@ body.loaded {
         padding: 1.5rem !important;
         border-radius: 12px !important;
         box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08) !important;
-        border-left: 4px solid #8e44ad !important;
+        border-left: 4px solid #3498db !important;
         margin-bottom: 0 !important;
         padding-left: 50px !important;
         position: relative;
@@ -2817,16 +2836,16 @@ body.loaded {
         top: 0.8rem;
         width: 12px;
         height: 12px;
-        background: #8e44ad;
+        background: #3498db;
         border: 3px solid white;
         border-radius: 50%;
-        box-shadow: 0 2px 6px rgba(142, 68, 173, 0.3);
+        box-shadow: 0 2px 6px rgba(52, 152, 219, 0.3);
         z-index: 1;
     }
 
     .publication-item h4 {
-        color: #8e44ad !important;
-        font-size: 1.1rem !important;
+        color: #3498db !important;
+        font-size: 0.95rem !important;
         margin: 0 0 0.8rem 0 !important;
         font-weight: 600 !important;
         line-height: 1.4 !important;
@@ -2834,26 +2853,26 @@ body.loaded {
 
     .publication-item p {
         color: #666 !important;
-        font-size: 0.9rem !important;
+        font-size: 0.8rem !important;
         margin: 0.5rem 0 !important;
         line-height: 1.5 !important;
     }
 
     .publication-item .authors {
         color: #7f8c8d !important;
-        font-size: 0.85rem !important;
+        font-size: 0.75rem !important;
         margin: 0.8rem 0 0 0 !important;
         line-height: 1.4 !important;
-        background: rgba(142, 68, 173, 0.05);
+        background: rgba(52, 152, 219, 0.05);
         padding: 0.5rem 0.8rem;
         border-radius: 8px;
-        border-left: 3px solid #8e44ad;
+        border-left: 3px solid #3498db;
     }
 
     .publication-item .authors strong {
-        color: #8e44ad !important;
+        color: #3498db !important;
         font-weight: 700 !important;
-        background: rgba(142, 68, 173, 0.15);
+        background: rgba(52, 152, 219, 0.15);
         padding: 0.1rem 0.3rem;
         border-radius: 4px;
     }
@@ -2873,7 +2892,7 @@ body.loaded {
         top: 0;
         bottom: 0;
         width: 2px;
-        background: linear-gradient(to bottom, #27ae60, #2ecc71);
+        background: linear-gradient(to bottom, #3498db, #2980b9);
         z-index: 0;
     }
 
@@ -2884,7 +2903,7 @@ body.loaded {
         padding: 1.5rem !important;
         border-radius: 12px !important;
         box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08) !important;
-        border-left: 4px solid #27ae60 !important;
+        border-left: 4px solid #3498db !important;
         margin-bottom: 0 !important;
         padding-left: 50px !important;
         position: relative;
@@ -2897,16 +2916,16 @@ body.loaded {
         top: 0.8rem;
         width: 12px;
         height: 12px;
-        background: #27ae60;
+        background: #3498db;
         border: 3px solid white;
         border-radius: 50%;
-        box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
+        box-shadow: 0 2px 6px rgba(52, 152, 219, 0.3);
         z-index: 1;
     }
 
     .patent-item h4 {
-        color: #27ae60 !important;
-        font-size: 1.1rem !important;
+        color: #3498db !important;
+        font-size: 0.95rem !important;
         margin: 0 0 0.8rem 0 !important;
         font-weight: 600 !important;
         line-height: 1.4 !important;
@@ -2914,12 +2933,12 @@ body.loaded {
 
     .patent-item p {
         color: #666 !important;
-        font-size: 0.9rem !important;
+        font-size: 0.8rem !important;
         margin: 0.5rem 0 0 0 !important;
-        background: rgba(39, 174, 96, 0.05);
+        background: rgba(52, 152, 219, 0.05);
         padding: 0.5rem 0.8rem;
         border-radius: 8px;
-        border-left: 3px solid #27ae60;
+        border-left: 3px solid #3498db;
         font-family: 'Courier New', monospace;
         font-weight: 500;
     }
