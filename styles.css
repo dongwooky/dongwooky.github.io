@@ -3002,6 +3002,34 @@ body.loaded {
     .accordion-description {
         display: none !important;
     }
+    
+    /* Education accordion elements hidden on desktop */
+    .education-item .accordion-toggle {
+        display: none !important;
+    }
+    
+    .education-item .accordion-content {
+        display: none !important;
+    }
+    
+    .education-item .accordion-details {
+        display: none !important;
+    }
+    
+    /* Show original education details on desktop */
+    .education-content .gpa,
+    .education-content .education-details {
+        display: block !important;
+    }
+    
+    /* Show education date and location on desktop */
+    .education-date {
+        display: block !important;
+    }
+    
+    .education-info .location {
+        display: block !important;
+    }
 }
 
 /* Make company logo and experience info clickable for image modal */
@@ -3014,4 +3042,128 @@ body.loaded {
 .company-logo:hover,
 .experience-info:hover {
     opacity: 0.8;
+}
+
+.experience-item:nth-child(odd) {
+    flex-direction: column !important;
+}
+
+/* Education Section Mobile - Accordion styles */
+.education-item.accordion-item .accordion-header {
+    position: relative;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.education-item .accordion-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: #3498db;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.education-item .accordion-toggle:hover {
+    background: #2980b9;
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+.education-item .accordion-toggle i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.education-item.accordion-item.active .accordion-toggle i {
+    transform: rotate(180deg);
+}
+
+.education-item .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0;
+}
+
+.education-item.accordion-item.active .accordion-content {
+    max-height: 280px;
+    padding-top: 15px;
+}
+
+/* Hide original education details on mobile - only show accordion content */
+.education-content .gpa,
+.education-content .education-details {
+    display: none !important;
+}
+
+/* Education section mobile layout adjustments */
+.education-date {
+    display: none;
+}
+
+.education-info .location {
+    display: none;
+}
+
+.education-item {
+    margin: 1.5rem 0 !important;
+}
+
+.education-content {
+    padding: 1rem !important;
+    width: 100% !important;
+}
+
+.education-header {
+    gap: 0.8rem !important;
+}
+
+.university-logo {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 2px !important;
+}
+
+.education-info h4 {
+    font-size: 1rem !important;
+    margin-bottom: 0.2rem !important;
+    line-height: 1.2 !important;
+}
+
+.education-info h5 {
+    font-size: 0.85rem !important;
+    margin-bottom: 0 !important;
+    line-height: 1.2 !important;
+}
+
+/* Education click areas */
+.university-logo {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.university-logo:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.education-info {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    padding: 0.2rem;
+    margin: -0.2rem;
+}
+
+.education-info:hover {
+    background: rgba(52, 152, 219, 0.1);
 }

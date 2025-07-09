@@ -671,7 +671,9 @@ function initAccordion() {
     accordionItems.forEach(item => {
         const toggleButton = item.querySelector('.accordion-toggle');
         const experienceInfo = item.querySelector('.experience-info');
+        const educationInfo = item.querySelector('.education-info');
         const companyLogo = item.querySelector('.company-logo');
+        const universityLogo = item.querySelector('.university-logo');
         
         if (toggleButton) {
             toggleButton.addEventListener('click', (e) => {
@@ -696,6 +698,17 @@ function initAccordion() {
             });
         }
         
+        // On mobile: education info area should toggle accordion
+        if (educationInfo) {
+            educationInfo.addEventListener('click', (e) => {
+                // Only on mobile, make education info toggle accordion
+                if (window.innerWidth <= 768) {
+                    e.stopPropagation();
+                    toggleAccordion(item, accordionItems);
+                }
+            });
+        }
+        
         // On mobile: company logo should still trigger image modal (remove stopPropagation)
         if (companyLogo) {
             companyLogo.addEventListener('click', (e) => {
@@ -703,6 +716,19 @@ function initAccordion() {
                 if (window.innerWidth <= 768) {
                     // Let the event bubble up to trigger the modal
                     return;
+                } else {
+                    // On desktop, prevent any accordion behavior
+                    e.stopPropagation();
+                }
+            });
+        }
+        
+        // On mobile: university logo click behavior (can be customized later)
+        if (universityLogo) {
+            universityLogo.addEventListener('click', (e) => {
+                // On mobile, currently just prevent accordion toggle for logo click
+                if (window.innerWidth <= 768) {
+                    e.stopPropagation();
                 } else {
                     // On desktop, prevent any accordion behavior
                     e.stopPropagation();
