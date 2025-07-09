@@ -2849,16 +2849,27 @@ body.loaded {
         display: none !important;
     }
     
-    /* Make company logo and experience info clickable for image modal */
-    .company-logo,
-    .experience-info {
+    /* On mobile: different click areas for different functions */
+    .company-logo {
         cursor: pointer;
-        transition: opacity 0.2s ease;
+        transition: all 0.2s ease;
     }
     
-    .company-logo:hover,
-    .experience-info:hover {
+    .company-logo:hover {
         opacity: 0.8;
+        transform: scale(1.05);
+    }
+    
+    .experience-info {
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border-radius: 8px;
+        padding: 0.2rem;
+        margin: -0.2rem;
+    }
+    
+    .experience-info:hover {
+        background: rgba(52, 152, 219, 0.1);
     }
     
     /* Hide desktop date on mobile and show compact mobile layout */
@@ -2991,4 +3002,16 @@ body.loaded {
     .accordion-description {
         display: none !important;
     }
+}
+
+/* Make company logo and experience info clickable for image modal */
+.company-logo,
+.experience-info {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.company-logo:hover,
+.experience-info:hover {
+    opacity: 0.8;
 }

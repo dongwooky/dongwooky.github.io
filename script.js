@@ -663,3 +663,76 @@ function showNotification(message, type = 'success') {
         }, 300);
     }, 4000);
 } 
+
+// Accordion functionality for mobile experience section
+function initAccordion() {
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    
+    accordionItems.forEach(item => {
+        const toggleButton = item.querySelector('.accordion-toggle');
+        const experienceInfo = item.querySelector('.experience-info');
+        const companyLogo = item.querySelector('.company-logo');
+        
+        if (toggleButton) {
+            toggleButton.addEventListener('click', (e) => {
+                // Prevent event bubbling to avoid triggering image modal
+                e.stopPropagation();
+                
+                // Only enable accordion on mobile
+                if (window.innerWidth <= 768) {
+                    toggleAccordion(item, accordionItems);
+                }
+            });
+        }
+        
+        // On mobile: experience info area should toggle accordion
+        if (experienceInfo) {
+            experienceInfo.addEventListener('click', (e) => {
+                // Only on mobile, make experience info toggle accordion
+                if (window.innerWidth <= 768) {
+                    e.stopPropagation();
+                    toggleAccordion(item, accordionItems);
+                }
+            });
+        }
+        
+        // On mobile: company logo should still trigger image modal (remove stopPropagation)
+        if (companyLogo) {
+            companyLogo.addEventListener('click', (e) => {
+                // On mobile, allow logo to trigger modal (don't stop propagation)
+                if (window.innerWidth <= 768) {
+                    // Let the event bubble up to trigger the modal
+                    return;
+                } else {
+                    // On desktop, prevent any accordion behavior
+                    e.stopPropagation();
+                }
+            });
+        }
+    });
+}
+
+function toggleAccordion(currentItem, allItems) {
+    // Close all other accordion items
+    allItems.forEach(otherItem => {
+        if (otherItem !== currentItem) {
+            otherItem.classList.remove('active');
+        }
+    });
+    
+    // Toggle current item
+    currentItem.classList.toggle('active');
+}
+
+// Initialize accordion when DOM is loaded
+document.addEventListener('DOMContentLoaded', initAccordion);
+
+// Re-initialize on window resize to handle desktop/mobile transition
+window.addEventListener('resize', () => {
+    // Remove active class on desktop
+    if (window.innerWidth > 768) {
+        document.querySelectorAll('.accordion-item').forEach(item => {
+            item.classList.remove('active');
+        });
+    }
+}); 
