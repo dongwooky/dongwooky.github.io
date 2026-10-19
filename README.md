@@ -1,191 +1,43 @@
-# 동우교의 홈페이지 🌟
+# dongwooky.github.io
 
-GitHub Pages를 위한 개인 홈페이지입니다. 모던하고 반응형인 디자인으로 제작되었습니다.
+Personal homepage of Dongwook Kwon — AI Research Engineer (LLM multi-agent systems, anomaly detection for critical infrastructure).
 
-## 🚀 주요 기능
+Live: https://dongwooky.github.io · Korean: https://dongwooky.github.io/?lang=ko
 
-- **반응형 디자인**: 모든 디바이스에서 완벽하게 작동합니다
-- **모던 UI/UX**: 깔끔하고 현대적인 디자인
-- **Progressive Web App (PWA)**: 오프라인 지원, 홈 화면 추가 가능
-- **부드러운 애니메이션**: 스크롤과 호버 효과
-- **모바일 친화적**: 모바일 네비게이션 메뉴
-- **인터랙티브**: 다양한 JavaScript 효과
-- **접근성**: WCAG 가이드라인 준수, 키보드 네비게이션 지원
-- **SEO 최적화**: 완전한 메타 태그, 구조화된 데이터, sitemap.xml
-- **성능 최적화**: Service Worker 캐싱, 로딩 애니메이션, 이미지 최적화
-- **수상 모달**: 클릭 가능한 수상 내역으로 실제 수상 사진 확인
-- **실제 Contact 폼**: mailto 기능으로 실제 이메일 전송 가능
-- **보안**: XSS 방지, 클릭재킹 방지 등 보안 헤더 적용
-- **404 페이지**: 사용자 친화적 에러 페이지와 사이트 검색 기능
-- **Favicon & Icons**: 브라우저 탭과 모바일 앱 아이콘 지원
-
-## 📁 파일 구조
+## Structure
 
 ```
-dongwooky.github.io/
-├── index.html                    # 메인 HTML 파일
-├── styles.css                    # 스타일시트
-├── script.js                     # JavaScript 파일
-├── sw.js                         # Service Worker (PWA 지원)
-├── manifest.json                 # PWA 매니페스트
-├── 404.html                      # 커스텀 404 에러 페이지
-├── robots.txt                    # 검색엔진 크롤링 가이드
-├── sitemap.xml                   # 사이트맵
-├── browserconfig.xml             # Windows 타일 설정
-├── profile.jpg                   # 프로필 이미지
-├── Dongwook_Kwon_Resume.pdf     # 이력서 파일
-├── .github/
-│   └── workflows/
-│       └── deploy.yml            # GitHub Actions 자동 배포
-├── logos/                        # 로고 이미지들
-│   ├── korea-ministry-oceans-fisheries.png
-│   ├── university-of-toronto.png
-│   ├── kwangwoon-university.svg
-│   └── ...
-├── awards/                       # 수상 사진들
-│   ├── ministry-award-2021.png
-│   ├── biomedical-poster-2024.jpg
-│   └── ...
-└── README.md                     # 프로젝트 설명서
+index.html              page skeleton (EN/KO strings swapped by JS)
+404.html
+Dongwook_Kwon_CV.pdf    the CV linked from the page
+assets/
+  css/main.css          design tokens (dark default, light via system/toggle) + layout
+  js/main.js            renders every section from cv.json, nav, theme, lightbox
+  js/network-bg.js      hero node-graph background (static under reduced motion)
+  data/cv.json          ★ all content — publications, patents, experience, education, awards
+  img/                  profile, og image, logos/, awards/
+.github/workflows/      GitHub Pages deploy
 ```
 
-## ✨ 최근 개선사항 (2025.01)
+No build step. Plain HTML/CSS/JS, deployed as-is by GitHub Pages.
 
-### 🔧 기능 개선
-- **Progressive Web App (PWA)**: 오프라인 지원, 홈 화면 추가, Service Worker 캐싱
-- **Contact 폼 기능**: 실제 이메일 전송 기능 구현 (mailto 방식)
-- **수상 모달**: 클릭 가능한 수상 목록으로 실제 수상 사진 확인 가능
-- **로딩 애니메이션**: 페이지 로딩 시 스피너 표시
-- **향상된 알림**: 성공/에러 상태별 다양한 알림 스타일
-- **404 에러 페이지**: 사용자 친화적 에러 페이지와 사이트 검색 기능
+## Updating content
 
-### 🎨 디자인 개선
-- **Favicon & Icons**: 브라우저 탭 아이콘과 모바일 앱 아이콘 추가
-- **호버 효과**: 더 부드럽고 자연스러운 카드 호버 애니메이션
-- **버튼 효과**: 개선된 클릭 피드백과 리플 효과
-- **스크롤 개선**: 네비게이션 높이를 고려한 부드러운 스크롤
+Edit `assets/data/cv.json`. Every user-facing string is an object with `en` and `ko` keys;
+anything that is the same in both languages (titles of English papers, patent numbers) is a plain string.
 
-### ♿ 접근성 향상
-- **Skip 링크**: 메인 콘텐츠로 바로 이동 가능
-- **Aria 라벨**: 스크린 리더를 위한 적절한 라벨링
-- **키보드 네비게이션**: Tab 키로 모든 요소 접근 가능
-- **Motion 설정 고려**: 애니메이션 감소 선호 사용자 지원
+- **New paper** → add to `publications`; set `"featured": true` to show it above the fold, pick a `badge`
+  (`ORAL`, `ACL`, `JOURNAL`, `AWARD`, `CONF`) and add `links` (DOI / Anthology / arXiv).
+- **New patent** → add to `patents` with `status` `registered` or `pending`.
+- **New award** → add to `awards`; drop a web-sized certificate image (≤1400px) in `assets/img/awards/` and set `image`.
+- **Stats strip** → `stats`; numeric `value`s count up on scroll.
+- **New CV** → replace `Dongwook_Kwon_CV.pdf`.
 
-### 🚀 SEO & 성능
-- **완전한 SEO 패키지**: robots.txt, sitemap.xml, 구조화된 데이터 (JSON-LD)
-- **메타 태그 최적화**: Open Graph, Twitter Cards, LinkedIn 최적화
-- **보안 헤더**: XSS, 클릭재킹, MIME 스니핑 방지
-- **구조화된 마크업**: main, nav 등 시맨틱 태그 사용
-- **성능 최적화**: Service Worker 캐싱, 이미지 lazy loading
-- **GitHub Actions**: 자동 빌드 및 배포 워크플로우
+UI labels (nav, section titles, buttons) live in the `UI` object at the top of `assets/js/main.js`.
 
-### 🗂️ 콘텐츠 업데이트
-- **완전한 수상 목록**: 9개의 모든 수상 내역 추가
-- **상세한 논문 목록**: 8개의 논문과 저자 정보 포함
-- **정리된 로고**: 일관성 있는 파일명과 구조화된 로고 관리
+## Local preview
 
-## 🎨 사용된 기술
-
-- **HTML5**: 시맨틱 마크업
-- **CSS3**: 
-  - Grid & Flexbox 레이아웃
-  - CSS 애니메이션
-  - 반응형 디자인
-  - 커스텀 속성
-- **JavaScript**: 
-  - 모바일 메뉴 토글
-  - 스무스 스크롤
-  - 인터섹션 옵저버
-  - 폼 핸들링
-- **외부 라이브러리**:
-  - Google Fonts (Poppins)
-  - Font Awesome 아이콘
-
-## 🌈 주요 섹션
-
-1. **히어로 섹션**: 환영 메시지와 소개
-2. **소개 섹션**: 개인 정보와 기술 스택
-3. **프로젝트 섹션**: 포트폴리오 프로젝트 전시
-4. **연락처 섹션**: 연락 정보와 메시지 폼
-
-## 📱 PWA (Progressive Web App) 기능
-
-이 사이트는 Progressive Web App으로 구축되어 다음과 같은 기능을 제공합니다:
-
-### 설치 방법
-- **모바일**: 브라우저에서 "홈 화면에 추가" 옵션 선택
-- **데스크톱**: 주소창의 설치 아이콘 클릭 또는 브라우저 메뉴에서 "앱 설치"
-
-### 주요 PWA 기능
-- **오프라인 액세스**: 인터넷 연결 없이도 기본 페이지 접근 가능
-- **빠른 로딩**: Service Worker를 통한 캐시로 빠른 페이지 로드
-- **홈 화면 추가**: 네이티브 앱처럼 홈 화면에서 바로 실행
-- **자동 업데이트**: 새 버전이 있을 때 자동으로 알림
-
-## 🛠️ 커스터마이징 방법
-
-### 개인 정보 수정
-`index.html` 파일에서 다음 내용을 수정하세요:
-- 이름과 소개 텍스트
-- 기술 스택 태그
-- 연락처 정보
-- 프로젝트 정보
-
-### 스타일 변경
-`styles.css` 파일에서 다음을 수정할 수 있습니다:
-- 색상 팔레트
-- 폰트 설정
-- 레이아웃 크기
-- 애니메이션 효과
-
-### 기능 추가
-`script.js` 파일에서 추가 기능을 구현할 수 있습니다:
-- 더 많은 인터랙션
-- 새로운 애니메이션
-- 폼 검증 로직
-
-### PWA 설정 변경
-`manifest.json` 파일에서 PWA 설정을 변경할 수 있습니다:
-- 앱 이름과 설명
-- 아이콘 및 테마 색상
-- 디스플레이 모드
-
-## 📱 반응형 브레이크포인트
-
-- **Desktop**: 1200px 이상
-- **Tablet**: 768px - 1199px
-- **Mobile**: 767px 이하
-
-## 🚀 배포
-
-이 프로젝트는 GitHub Pages에서 자동으로 배포됩니다:
-1. 코드를 `main` 브랜치에 푸시
-2. GitHub Pages 설정에서 소스를 `main` 브랜치로 설정
-3. `https://username.github.io`에서 사이트 확인
-
-## 🎯 앞으로의 개선사항
-
-### 🌟 계획 중인 기능
-- [ ] **다크 모드**: 시스템 설정에 따른 자동 테마 전환
-- [ ] **블로그 섹션**: 연구 과정과 기술 포스트 추가
-- [ ] **다국어 지원**: 한국어/영어 버전 제공
-- [ ] **실시간 채팅**: 방문자와의 실시간 소통 기능
-- [ ] **프로젝트 상세 페이지**: 각 프로젝트의 자세한 설명과 데모
-- [ ] **논문 PDF 뷰어**: 브라우저에서 직접 논문 읽기
-- [ ] **검색 기능**: 사이트 내 컨텐츠 검색
-- [ ] **방문자 통계**: 간단한 방문 통계 대시보드
-
-### 🔧 기술적 개선
-- [ ] **이미지 최적화**: WebP 포맷 지원 및 반응형 이미지
-- [ ] **CDN 적용**: 글로벌 사용자를 위한 빠른 로딩
-- [ ] **A/B 테스트**: 사용자 경험 개선을 위한 실험
-- [ ] **웹 분석**: Google Analytics 4 통합
-- [ ] **보안 강화**: Content Security Policy (CSP) 적용
-
-## 📝 라이선스
-
-이 프로젝트는 MIT 라이선스를 따릅니다.
-
----
-
-💡 **팁**: 정기적으로 내용을 업데이트하여 최신 정보를 유지하세요! 
+```
+python3 -m http.server 8000
+# open http://localhost:8000  (and ?lang=ko)
+```
