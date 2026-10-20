@@ -87,7 +87,8 @@
   // ---------- renderers ----------
   function renderHero(p) {
     document.getElementById('hero-role').textContent = t(p.role);
-    document.getElementById('hero-name').innerHTML = `${esc(t(p.name))}<span class="alt">${esc(t(p.nameAlt))}</span>`;
+    const alt = t(p.nameAlt);
+    document.getElementById('hero-name').innerHTML = esc(t(p.name)) + (alt ? `<span class="alt">${esc(alt)}</span>` : '');
     document.getElementById('hero-tagline').textContent = t(p.tagline);
     document.getElementById('hero-affil').textContent = t(p.affiliation);
     document.querySelectorAll('[data-link="cv"]').forEach((a) => (a.href = p.links.cv));
