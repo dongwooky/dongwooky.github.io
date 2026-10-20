@@ -72,16 +72,27 @@
   }
 
   // ---------- theme ----------
+  function isLightTheme() {
+    return getComputedStyle(document.documentElement).colorScheme.includes('light');
+  }
+  function syncThemeUI() {
+    const light = isLightTheme();
+    document.getElementById('icon-moon').toggleAttribute('hidden', light);
+    document.getElementById('icon-sun').toggleAttribute('hidden', !light);
+    document.querySelector('meta[name="theme-color"]').content = light ? '#f6f8fb' : '#0b0f17';
+  }
   function initTheme() {
     let stored = null;
     try { stored = localStorage.getItem('theme'); } catch (_) {}
     if (stored === 'light' || stored === 'dark') document.documentElement.dataset.theme = stored;
     document.getElementById('theme-btn').addEventListener('click', () => {
-      const isLight = getComputedStyle(document.documentElement).colorScheme.includes('light');
-      const next = isLight ? 'dark' : 'light';
+      const next = isLightTheme() ? 'dark' : 'light';
       document.documentElement.dataset.theme = next;
       try { localStorage.setItem('theme', next); } catch (_) {}
+      syncThemeUI();
     });
+    matchMedia('(prefers-color-scheme: light)').addEventListener('change', syncThemeUI);
+    syncThemeUI();
   }
 
   // ---------- renderers ----------
@@ -100,13 +111,25 @@
     document.title = `${t(p.name)} · ${t(p.role)}`;
   }
 
+  function resolveStat(s) {
+    const counts = {
+      'patents.registered': DATA.patents.filter((p) => p.status === 'registered').length,
+      'patents.pending': DATA.patents.filter((p) => p.status === 'pending').length,
+      publications: DATA.publications.length,
+      awards: DATA.awards.length,
+    };
+    const value = typeof s.value === 'string' && s.value.startsWith('auto:') ? counts[s.value.slice(5)] : s.value;
+    const label = t(s.label).replace(/\{(\w+)\}/g, (_, k) => counts[`patents.${k}`] ?? counts[k] ?? '');
+    return { ...s, value, label };
+  }
+
   function renderStats(stats) {
     const el = document.getElementById('impact-grid');
-    el.innerHTML = stats.map((s) => {
+    el.innerHTML = stats.map(resolveStat).map((s) => {
       const numeric = typeof s.value === 'number';
       return `<a class="stat" href="${esc(s.href || '#')}">
         <div class="v" ${numeric ? `data-count="${s.value}"` : ''}>${numeric ? '0' : esc(s.value)}${esc(s.suffix || '')}</div>
-        <div class="l">${esc(t(s.label))}</div></a>`;
+        <div class="l">${esc(s.label)}</div></a>`;
     }).join('');
     countUp(el);
   }
@@ -153,7 +176,7 @@
         <h3>${esc(p.title)}</h3>
         <p class="authors">${p.authors}</p>
         <p class="venue"><span class="yr">${esc(p.year)}</span> · ${esc(t(p.venue))}</p>
-        ${p.note ? `<p class="note">${esc(t(p.note))}</p>` : ''}
+        ${t(p.note) ? `<p class="note">${esc(t(p.note))}</p>` : ''}
         ${p.summary ? `<p class="summary">${esc(t(p.summary))}</p>` : ''}
         ${p.links && p.links.length ? `<div class="links">${p.links.map((l) => `<a href="${esc(l.href)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join('')}</div>` : ''}
       </div></article>`;
@@ -229,12 +252,19 @@
   // ---------- lightbox ----------
   function initLightbox() {
     const lb = document.getElementById('lightbox'), img = lb.querySelector('img'), cap = lb.querySelector('.cap');
-    const close = () => { lb.classList.remove('open'); img.src = ''; document.body.style.overflow = ''; };
+    const closeBtn = lb.querySelector('.close');
+    let opener = null;
+    const close = () => {
+      lb.classList.remove('open'); img.src = ''; document.body.style.overflow = '';
+      if (opener) { opener.focus(); opener = null; }
+    };
     document.addEventListener('click', (e) => {
       const b = e.target.closest('.award.clickable');
       if (!b) return;
+      opener = b;
       img.src = b.dataset.img; img.alt = b.dataset.cap; cap.textContent = b.dataset.cap;
       lb.classList.add('open'); document.body.style.overflow = 'hidden';
+      closeBtn.focus();
     });
     lb.addEventListener('click', (e) => { if (e.target === lb || e.target.closest('.close')) close(); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lb.classList.contains('open')) close(); });
@@ -247,7 +277,12 @@
       const open = menu.classList.toggle('open');
       btn.setAttribute('aria-expanded', String(open));
     });
-    menu.addEventListener('click', (e) => { if (e.target.tagName === 'A') menu.classList.remove('open'); });
+    const closeMenu = () => { menu.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); };
+    menu.addEventListener('click', (e) => { if (e.target.tagName === 'A') closeMenu(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    document.addEventListener('click', (e) => {
+      if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) closeMenu();
+    });
 
     const links = [...document.querySelectorAll('.nav-links a')];
     const sections = links.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
@@ -287,6 +322,7 @@
     renderExperience(DATA.experience);
     renderEducation(DATA.education);
     renderAwards(DATA.awards);
+    if (DATA.meta && DATA.meta.updated) document.getElementById('updated').textContent = DATA.meta.updated;
   }
 
   document.addEventListener('DOMContentLoaded', () => {

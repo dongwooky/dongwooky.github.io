@@ -27,10 +27,11 @@ Edit `assets/data/cv.json`. Every user-facing string is an object with `en` and 
 anything that is the same in both languages (titles of English papers, patent numbers) is a plain string.
 
 - **New paper** → add to `publications`; set `"featured": true` to show it above the fold, pick a `badge`
-  (venue name, e.g. `EMNLP`, `ACL`, `IBEC`, or `JOURNAL`; `EMNLP`/`ACL` render filled, `JOURNAL` outlined) and add `links` (DOI / Anthology / arXiv).
+  (the venue name: `EMNLP`/`ACL` render filled blue, `DMKD`/`Electronics` outlined, anything else neutral; add a CSS rule in `main.css` for a new journal) and add `links` (DOI / Anthology / arXiv).
 - **New patent** → add to `patents` with `status` `registered` or `pending`.
 - **New award** → add to `awards`; drop a web-sized certificate image (≤1400px) in `assets/img/awards/` and set `image`.
-- **Stats strip** → `stats`; numeric `value`s count up on scroll.
+- **Stats strip** → `stats`; `auto:publications`, `auto:awards`, `auto:patents.registered` are counted from the data, numbers count up on scroll.
+- **Last updated** → `meta.updated`.
 - **New CV** → replace `Dongwook_Kwon_CV.pdf`.
 
 UI labels (nav, section titles, buttons) live in the `UI` object at the top of `assets/js/main.js`.

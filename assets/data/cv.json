@@ -1,4 +1,7 @@
 {
+  "meta": {
+    "updated": "2026-10-20"
+  },
   "profile": {
     "name": {
       "en": "Dongwook Kwon",
@@ -54,16 +57,15 @@
       "href": "#publications"
     },
     {
-      "value": 2,
-      "suffix": "",
+      "value": "auto:patents.registered",
       "label": {
-        "en": "Registered patents (+2 pending)",
-        "ko": "등록 특허 (출원 2건 추가)"
+        "en": "Registered patents (+{pending} pending)",
+        "ko": "등록 특허 (출원 {pending}건 추가)"
       },
       "href": "#patents"
     },
     {
-      "value": 7,
+      "value": "auto:publications",
       "label": {
         "en": "Peer-reviewed publications",
         "ko": "동료 심사 논문"
@@ -71,7 +73,7 @@
       "href": "#publications"
     },
     {
-      "value": 5,
+      "value": "auto:awards",
       "label": {
         "en": "Awards & honors",
         "ko": "수상 및 표창"
@@ -186,7 +188,7 @@
     },
     {
       "featured": true,
-      "badge": "JOURNAL",
+      "badge": "DMKD",
       "title": "Graph-Enhanced Bidirectional GRU for Anomaly Detection in Power Generation Environments",
       "authors": "<b>D. Kwon</b>, Y. Kang, J. Lee, Y. Nam, J. Won, K. K. Kim, D. D. Kim, C. Park",
       "venue": {
@@ -196,7 +198,7 @@
       "year": 2026,
       "note": {
         "en": "First author",
-        "ko": "제1저자"
+        "ko": "제1저자 · SCIE"
       },
       "summary": {
         "en": "Combines a bidirectional GRU with graph attention to capture sensor dependencies in industrial power-generation control data; detected 44 of 45 simulated abnormal events with interpretable attention weights.",
@@ -227,7 +229,7 @@
     },
     {
       "featured": false,
-      "badge": "JOURNAL",
+      "badge": "Electronics",
       "title": "Designing a Remote Photoplethysmography-Based Heart Rate Estimation Algorithm During a Treadmill Exercise",
       "authors": "Y. Nam, J. Lee, H. Lee, <b>D. Kwon</b>, M. Yeo, S. Kim, R. Sohn, C. Park",
       "venue": {
@@ -240,7 +242,11 @@
           "label": "DOI",
           "href": "https://doi.org/10.3390/electronics14050890"
         }
-      ]
+      ],
+      "note": {
+        "en": "",
+        "ko": "SCIE"
+      }
     },
     {
       "featured": false,
