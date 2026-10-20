@@ -196,10 +196,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .section-head .sub { color: var(--muted); font-size: 14px; max-width: 40em; }
 
 /* about */
-.about-grid { display: grid; gap: 40px; }
-@media (min-width: 860px) { .about-grid { grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; } }
-.about-text { font-size: 1.05rem; color: var(--text-2); line-height: 1.7; }
+.about-grid { display: grid; gap: 36px; }
+.about-text { font-size: 1.05rem; color: var(--text-2); line-height: 1.7; max-width: 760px; }
+.about-text p + p { margin-top: 1em; }
 .research-cards { display: grid; gap: 14px; }
+@media (min-width: 860px) { .research-cards { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
 .card {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px;
   transition: border-color 0.2s ease, transform 0.2s ease;

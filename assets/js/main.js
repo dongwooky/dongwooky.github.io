@@ -83,7 +83,7 @@
     document.querySelectorAll('[data-link="github"]').forEach((a) => (a.href = p.links.github));
     document.querySelectorAll('[data-link="linkedin"]').forEach((a) => (a.href = p.links.linkedin));
     document.querySelectorAll('[data-link="email"]').forEach((a) => { a.href = `mailto:${p.email}`; if (a.classList.contains('email')) a.textContent = p.email; });
-    document.getElementById('about-text').textContent = t(p.about);
+    document.getElementById('about-text').innerHTML = t(p.about).split(/\n\s*\n/).map((x) => `<p>${esc(x)}</p>`).join('');
     document.title = `${t(p.name)} · ${t(p.role)}`;
   }
 

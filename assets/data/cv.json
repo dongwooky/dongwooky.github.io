@@ -35,8 +35,8 @@
       "cv": "Dongwook_Kwon_CV.pdf"
     },
     "about": {
-      "en": "I work at the intersection of large language models, multi-agent systems, and AI-driven anomaly detection for critical infrastructure. My research has been published in top-tier venues, including an Oral at EMNLP 2025 and a paper at ACL 2026 (both Industry Tracks, with LG Electronics), as well as a first-authored journal article in Data Mining and Knowledge Discovery on anomaly detection for power-generation control systems. I hold registered patents in network and medical-device anomaly detection, and I engineered and delivered an agent-based codebase for a mission-critical vehicle control data project for Hyundai Motor Company.",
-      "ko": "대규모 언어 모델(LLM), 멀티 에이전트 시스템, 그리고 핵심 인프라를 위한 AI 기반 이상 탐지의 교차점에서 연구하고 개발합니다. LG전자와 협업한 연구가 EMNLP 2025 Oral과 ACL 2026(모두 Industry Track)에 채택되었고, 발전소 제어 시스템 이상 탐지 연구를 제1저자로 Data Mining and Knowledge Discovery 저널에 게재했습니다. 네트워크 및 의료기기 이상 탐지 분야의 등록 특허를 보유하고 있으며, 현대자동차의 미션 크리티컬 차량 제어 데이터 프로젝트를 위한 에이전트 기반 코드베이스를 설계·납품했습니다."
+      "en": "I work at the intersection of large language models, multi-agent systems, and AI-driven anomaly detection for critical infrastructure. My research has been published in top-tier venues, including an Oral at EMNLP 2025 and a paper at ACL 2026 (both Industry Tracks, with LG Electronics), as well as a first-authored journal article in Data Mining and Knowledge Discovery on anomaly detection for power-generation control systems.\n\nI hold registered patents in network and medical-device anomaly detection, and I engineered and delivered an agent-based codebase for a mission-critical vehicle control data project for Hyundai Motor Company.",
+      "ko": "대규모 언어 모델(LLM), 멀티 에이전트 시스템, 그리고 핵심 인프라를 위한 AI 기반 이상 탐지의 교차점에서 연구하고 개발합니다. LG전자와 협업한 연구가 EMNLP 2025 Oral과 ACL 2026(모두 Industry Track)에 채택되었고, 발전소 제어 시스템 이상 탐지 연구를 제1저자로 Data Mining and Knowledge Discovery 저널에 게재했습니다.\n\n네트워크 및 의료기기 이상 탐지 분야의 등록 특허를 보유하고 있으며, 현대자동차의 미션 크리티컬 차량 제어 데이터 프로젝트를 위한 에이전트 기반 코드베이스를 설계·납품했습니다."
     }
   },
   "stats": [
