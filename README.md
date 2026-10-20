@@ -11,8 +11,8 @@ index.html              page skeleton (EN/KO strings swapped by JS)
 404.html
 Dongwook_Kwon_CV.pdf    the CV linked from the page
 assets/
-  css/main.css          design tokens (dark default, light via system/toggle) + layout
-  js/main.js            renders every section from cv.json, nav, theme, lightbox
+  css/main.css          design tokens (light theme) + layout
+  js/main.js            renders every section from cv.json, nav, lightbox
   js/network-bg.js      hero node-graph background (static under reduced motion)
   data/cv.json          ★ all content — publications, patents, experience, education, awards
   img/                  profile, og image, logos/, awards/

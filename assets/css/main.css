@@ -1,37 +1,9 @@
 /* ==========================================================================
    dongwooky.github.io — design tokens & layout
-   One accent color, dark by default, light via system preference or toggle.
+   One accent color on a light background.
    ========================================================================== */
 
 :root {
-  --bg: #0b0f17;
-  --bg-2: #0f1520;
-  --surface: #141b28;
-  --surface-2: #1a2334;
-  --border: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.16);
-  --text: #e9eef6;
-  --text-2: #b7c2d3;
-  --muted: #8b97ab;
-  --accent: #5b9dff;
-  --accent-ink: #0b0f17;
-  --accent-soft: rgba(91, 157, 255, 0.14);
-  --green: #3ecf8e;
-  --green-soft: rgba(62, 207, 142, 0.14);
-  --amber: #f5b14c;
-  --amber-soft: rgba(245, 177, 76, 0.14);
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  --radius: 14px;
-  --radius-sm: 8px;
-  --font-sans: "Inter", "Noto Sans KR", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-  --nav-h: 64px;
-  --max-w: 1120px;
-  --gutter: 16px;
-  color-scheme: dark;
-}
-
-:root[data-theme="light"] {
   --bg: #f6f8fb;
   --bg-2: #ffffff;
   --surface: #ffffff;
@@ -49,30 +21,14 @@
   --amber: #b45309;
   --amber-soft: rgba(180, 83, 9, 0.1);
   --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --radius: 14px;
+  --radius-sm: 8px;
+  --font-sans: "Inter", "Noto Sans KR", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --nav-h: 64px;
+  --max-w: 1120px;
+  --gutter: 16px;
   color-scheme: light;
-}
-
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
-    --bg: #f6f8fb;
-    --bg-2: #ffffff;
-    --surface: #ffffff;
-    --surface-2: #f1f4f9;
-    --border: rgba(15, 23, 42, 0.09);
-    --border-strong: rgba(15, 23, 42, 0.18);
-    --text: #0f172a;
-    --text-2: #334155;
-    --muted: #5b6b82;
-    --accent: #2563eb;
-    --accent-ink: #ffffff;
-    --accent-soft: rgba(37, 99, 235, 0.1);
-    --green: #15803d;
-    --green-soft: rgba(21, 128, 61, 0.1);
-    --amber: #b45309;
-    --amber-soft: rgba(180, 83, 9, 0.1);
-    --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-    color-scheme: light;
-  }
 }
 
 /* ---------- base ---------- */
@@ -141,7 +97,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .icon-btn:hover { background: var(--surface-2); color: var(--text); }
 .icon-btn svg { width: 18px; height: 18px; }
-.icon-btn svg[hidden] { display: none; }
 .lang-toggle {
   display: inline-flex; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; height: 38px;
   font-family: var(--font-mono); font-size: 12px; font-weight: 600;

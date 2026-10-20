@@ -84,6 +84,4 @@
     });
     raf = requestAnimationFrame(step);
   }
-  // redraw with the new accent when the theme flips
-  new MutationObserver(draw).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 })();

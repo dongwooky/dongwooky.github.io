@@ -1,5 +1,5 @@
 /* dongwooky.github.io — renders every section from assets/data/cv.json
-   in the active language (EN / KO), plus nav, theme, reveal and lightbox. */
+   in the active language (EN / KO), plus nav, reveal and lightbox. */
 (function () {
   'use strict';
 
@@ -69,30 +69,6 @@
     const url = new URL(location.href);
     if (lang === 'ko') url.searchParams.set('lang', 'ko'); else url.searchParams.delete('lang');
     history.replaceState(null, '', url);
-  }
-
-  // ---------- theme ----------
-  function isLightTheme() {
-    return getComputedStyle(document.documentElement).colorScheme.includes('light');
-  }
-  function syncThemeUI() {
-    const light = isLightTheme();
-    document.getElementById('icon-moon').toggleAttribute('hidden', light);
-    document.getElementById('icon-sun').toggleAttribute('hidden', !light);
-    document.querySelector('meta[name="theme-color"]').content = light ? '#f6f8fb' : '#0b0f17';
-  }
-  function initTheme() {
-    let stored = null;
-    try { stored = localStorage.getItem('theme'); } catch (_) {}
-    if (stored === 'light' || stored === 'dark') document.documentElement.dataset.theme = stored;
-    document.getElementById('theme-btn').addEventListener('click', () => {
-      const next = isLightTheme() ? 'dark' : 'light';
-      document.documentElement.dataset.theme = next;
-      try { localStorage.setItem('theme', next); } catch (_) {}
-      syncThemeUI();
-    });
-    matchMedia('(prefers-color-scheme: light)').addEventListener('change', syncThemeUI);
-    syncThemeUI();
   }
 
   // ---------- renderers ----------
@@ -326,7 +302,6 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    initTheme();
     initNav();
     initLightbox();
     unregisterOldSW();
