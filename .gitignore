@@ -1,0 +1,6 @@
+# Source files dropped into the repo root for Claude to process (photos, scans, PDFs) must not be published.
+/*.png
+/*.jpg
+/*.jpeg
+/*.pdf
+!/Dongwook_Kwon_CV.pdf
