@@ -184,3 +184,11 @@ dongwooky.github.io/
 5. CV에 없는 기존 항목 — **SLAM 사족보행 로봇 프로젝트, Leadership 활동, 기타 수상(KIIF 동상, 교내상, 장학금)** — 을 완전히 뺄까요, 하단 "More"로 접어서 둘까요?
 6. 디자인 톤: **다크 기본(테크/연구 느낌)** vs **라이트 기본(학술적·깔끔)** 중 선호가 있나요?
 7. 프로필 사진은 현재 `profile.jpg`를 그대로 쓸까요?
+
+---
+
+## 9. 할 일 (TODO)
+
+- [ ] **IEIE 2025 우수 학생 논문상 상장 사진** 받으면 `assets/img/awards/`에 넣고 `cv.json`의 `awards` 항목 `image` 연결
+- [ ] **특허 한글 명칭** 받으면 `cv.json`의 `patents[*].title.ko` 교체 (현재는 영문 명칭 의역)
+- [x] 슈어소프트테크 로고 → `assets/img/logos/suresoft.png` (2026-10-20)

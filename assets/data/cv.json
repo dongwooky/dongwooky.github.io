@@ -1,8 +1,17 @@
 {
   "profile": {
-    "name": { "en": "Dongwook Kwon", "ko": "권동욱" },
-    "nameAlt": { "en": "권동욱", "ko": "Dongwook Kwon" },
-    "role": { "en": "AI Research Engineer", "ko": "AI 리서치 엔지니어" },
+    "name": {
+      "en": "Dongwook Kwon",
+      "ko": "권동욱"
+    },
+    "nameAlt": {
+      "en": "권동욱",
+      "ko": "Dongwook Kwon"
+    },
+    "role": {
+      "en": "AI Research Engineer",
+      "ko": "AI 리서치 엔지니어"
+    },
     "tagline": {
       "en": "Building reliable, secure autonomous AI — from multi-agent LLM systems to anomaly detection for infrastructure that cannot fail.",
       "ko": "멀티 에이전트 LLM 시스템부터 핵심 인프라 이상 탐지까지, 신뢰할 수 있고 안전한 자율 AI를 만듭니다."
@@ -12,7 +21,10 @@
       "ko": "Suresoft Technologies 지능형 에이전트 기술팀 AI 엔지니어 · 광운대학교 컴퓨터공학 석사 · University of Toronto × LG전자 토론토 AI Lab 방문 연구원"
     },
     "email": "tomiyadragon@gmail.com",
-    "location": { "en": "Seongnam, South Korea", "ko": "대한민국 성남" },
+    "location": {
+      "en": "Seongnam, South Korea",
+      "ko": "대한민국 성남"
+    },
     "links": {
       "scholar": "https://scholar.google.com/citations?user=4dZoa_8AAAAJ&hl=en",
       "github": "https://github.com/dongwooky",
@@ -24,61 +36,127 @@
       "ko": "대규모 언어 모델(LLM), 멀티 에이전트 시스템, 그리고 핵심 인프라를 위한 AI 기반 이상 탐지의 교차점에서 연구하고 개발합니다. LG전자와 협업한 연구가 EMNLP 2025 Oral과 ACL 2026(모두 Industry Track)에 채택되었고, 발전소 제어 시스템 이상 탐지 연구를 제1저자로 Data Mining and Knowledge Discovery 저널에 게재했습니다. 네트워크 및 의료기기 이상 탐지 분야의 등록 특허를 보유하고 있으며, 현대자동차의 미션 크리티컬 차량 제어 데이터 프로젝트를 위한 에이전트 기반 코드베이스를 설계·납품했습니다."
     }
   },
-
   "stats": [
-    { "value": "EMNLP 2025", "label": { "en": "Oral · Industry Track", "ko": "Oral · Industry Track" }, "href": "#publications" },
-    { "value": "ACL 2026", "label": { "en": "Industry Track", "ko": "Industry Track" }, "href": "#publications" },
-    { "value": 2, "suffix": "", "label": { "en": "Registered patents (+2 pending)", "ko": "등록 특허 (출원 2건 추가)" }, "href": "#patents" },
-    { "value": 7, "label": { "en": "Peer-reviewed publications", "ko": "동료 심사 논문" }, "href": "#publications" },
-    { "value": 5, "label": { "en": "Awards & honors", "ko": "수상 및 표창" }, "href": "#awards" }
+    {
+      "value": "EMNLP 2025",
+      "label": {
+        "en": "Oral · Industry Track",
+        "ko": "Oral · Industry Track"
+      },
+      "href": "#publications"
+    },
+    {
+      "value": "ACL 2026",
+      "label": {
+        "en": "Industry Track",
+        "ko": "Industry Track"
+      },
+      "href": "#publications"
+    },
+    {
+      "value": 2,
+      "suffix": "",
+      "label": {
+        "en": "Registered patents (+2 pending)",
+        "ko": "등록 특허 (출원 2건 추가)"
+      },
+      "href": "#patents"
+    },
+    {
+      "value": 7,
+      "label": {
+        "en": "Peer-reviewed publications",
+        "ko": "동료 심사 논문"
+      },
+      "href": "#publications"
+    },
+    {
+      "value": 5,
+      "label": {
+        "en": "Awards & honors",
+        "ko": "수상 및 표창"
+      },
+      "href": "#awards"
+    }
   ],
-
   "research": [
     {
       "icon": "agents",
-      "title": { "en": "LLM & Multi-Agent Systems", "ko": "LLM · 멀티 에이전트 시스템" },
+      "title": {
+        "en": "LLM & Multi-Agent Systems",
+        "ko": "LLM · 멀티 에이전트 시스템"
+      },
       "desc": {
         "en": "Evaluation frameworks and cost-aware architectures for agentic AI — graph-based process metrics (GEMMAS) and multi-agent deliberation inside LLM cascades (CascadeDebate). Now building agent-based AI validation systems in industry.",
         "ko": "에이전트 AI를 위한 평가 프레임워크와 비용 인지 아키텍처 연구 — 그래프 기반 프로세스 지표(GEMMAS), LLM 캐스케이드 내 멀티 에이전트 숙의(CascadeDebate). 현재 산업 현장에서 에이전트 기반 AI 검증 시스템을 개발 중입니다."
       },
-      "tags": ["EMNLP 2025 Oral", "ACL 2026", "LG Electronics"]
+      "tags": [
+        "EMNLP 2025 Oral",
+        "ACL 2026",
+        "LG Electronics"
+      ]
     },
     {
       "icon": "graph",
-      "title": { "en": "Anomaly Detection for Critical Infrastructure", "ko": "핵심 인프라 이상 탐지" },
+      "title": {
+        "en": "Anomaly Detection for Critical Infrastructure",
+        "ko": "핵심 인프라 이상 탐지"
+      },
       "desc": {
         "en": "Graph neural networks and recurrent models for multivariate time-series from power-generation control systems and nuclear environments — interpretable, prediction-based detection of rare faults.",
         "ko": "발전소 제어 시스템과 원자력 환경의 다변량 시계열을 위한 그래프 신경망·순환 모델 연구 — 해석 가능한 예측 기반 희귀 고장 탐지."
       },
-      "tags": ["DMKD 2026", "GNN · GRU", "Nuclear Cybersecurity"]
+      "tags": [
+        "DMKD 2026",
+        "GNN · GRU",
+        "Nuclear Cybersecurity"
+      ]
     },
     {
       "icon": "shield",
-      "title": { "en": "Secure Medical & Network Systems", "ko": "의료기기 · 네트워크 보안" },
+      "title": {
+        "en": "Secure Medical & Network Systems",
+        "ko": "의료기기 · 네트워크 보안"
+      },
       "desc": {
         "en": "Real-time anomaly detection for implantable medical devices and GPT-API-based network intrusion detection — research that became registered patents and award-winning papers.",
         "ko": "이식형 의료기기 실시간 이상 탐지와 GPT API 기반 네트워크 침입 탐지 — 등록 특허와 수상 논문으로 이어진 연구."
       },
-      "tags": ["2 Registered Patents", "IBEC Silver", "GAT · Transformer"]
+      "tags": [
+        "2 Registered Patents",
+        "IBEC Silver",
+        "GAT · Transformer"
+      ]
     }
   ],
-
   "publications": [
     {
       "featured": true,
       "badge": "ORAL",
       "title": "GEMMAS: Graph-based Evaluation Metrics for Multi Agent Systems",
       "authors": "J. Lee†, R. Chang†, <b>D. Kwon</b>†, H. Singh, N. Verma",
-      "venue": { "en": "EMNLP 2025, Industry Track (Oral)", "ko": "EMNLP 2025, Industry Track (Oral)" },
+      "venue": {
+        "en": "EMNLP 2025, Industry Track (Oral)",
+        "ko": "EMNLP 2025, Industry Track (Oral)"
+      },
       "year": 2025,
-      "note": { "en": "† Equal contribution · with LG Electronics Toronto AI Lab", "ko": "† 공동 제1저자 · LG전자 토론토 AI Lab 협업" },
+      "note": {
+        "en": "† Equal contribution · with LG Electronics Toronto AI Lab",
+        "ko": "† 공동 제1저자 · LG전자 토론토 AI Lab 협업"
+      },
       "summary": {
         "en": "Models agent interactions as a DAG and introduces process-level metrics — Information Diversity Score and Unnecessary Path Ratio — showing that systems within 2.1% accuracy can differ by 80% in redundant reasoning.",
         "ko": "에이전트 간 상호작용을 DAG로 모델링하고 프로세스 수준 지표(정보 다양성 점수, 불필요 경로 비율)를 제안. 정확도 차이가 2.1%에 불과한 시스템도 중복 추론은 80%까지 차이 남을 보임."
       },
       "links": [
-        { "label": "ACL Anthology", "href": "https://aclanthology.org/2025.emnlp-industry.106/" },
-        { "label": "arXiv", "href": "https://arxiv.org/abs/2507.13190" }
+        {
+          "label": "ACL Anthology",
+          "href": "https://aclanthology.org/2025.emnlp-industry.106/"
+        },
+        {
+          "label": "arXiv",
+          "href": "https://arxiv.org/abs/2507.13190"
+        }
       ]
     },
     {
@@ -86,15 +164,24 @@
       "badge": "ACL",
       "title": "CascadeDebate: Multi-Agent Deliberation for Cost-Aware LLM Cascades",
       "authors": "R. Chang†, <b>D. Kwon</b>†, J. Lee†, N. Verma",
-      "venue": { "en": "ACL 2026, Industry Track, pp. 1329–1340", "ko": "ACL 2026, Industry Track, pp. 1329–1340" },
+      "venue": {
+        "en": "ACL 2026, Industry Track, pp. 1329–1340",
+        "ko": "ACL 2026, Industry Track, pp. 1329–1340"
+      },
       "year": 2026,
-      "note": { "en": "† Equal contribution · with LG Electronics Toronto AI Lab", "ko": "† 공동 제1저자 · LG전자 토론토 AI Lab 협업" },
+      "note": {
+        "en": "† Equal contribution · with LG Electronics Toronto AI Lab",
+        "ko": "† 공동 제1저자 · LG전자 토론토 AI Lab 협업"
+      },
       "summary": {
         "en": "Places small agent ensembles at each escalation point of an LLM cascade so uncertain queries are resolved by deliberation before calling a costlier model — up to 26.75% over single-model cascades across five benchmarks.",
         "ko": "LLM 캐스케이드의 각 상향 지점에 소규모 에이전트 앙상블을 두어, 불확실한 질의를 더 비싼 모델 호출 전에 숙의로 해결. 5개 벤치마크에서 단일 모델 캐스케이드 대비 최대 26.75% 향상."
       },
       "links": [
-        { "label": "ACL Anthology", "href": "https://aclanthology.org/2026.acl-industry.93/" }
+        {
+          "label": "ACL Anthology",
+          "href": "https://aclanthology.org/2026.acl-industry.93/"
+        }
       ]
     },
     {
@@ -102,15 +189,24 @@
       "badge": "JOURNAL",
       "title": "Graph-Enhanced Bidirectional GRU for Anomaly Detection in Power Generation Environments",
       "authors": "<b>D. Kwon</b>, Y. Kang, J. Lee, Y. Nam, J. Won, K. K. Kim, D. D. Kim, C. Park",
-      "venue": { "en": "Data Mining and Knowledge Discovery (Springer Nature), vol. 40, no. 102", "ko": "Data Mining and Knowledge Discovery (Springer Nature), vol. 40, no. 102" },
+      "venue": {
+        "en": "Data Mining and Knowledge Discovery (Springer Nature), vol. 40, no. 102",
+        "ko": "Data Mining and Knowledge Discovery (Springer Nature), vol. 40, no. 102"
+      },
       "year": 2026,
-      "note": { "en": "First author", "ko": "제1저자" },
+      "note": {
+        "en": "First author",
+        "ko": "제1저자"
+      },
       "summary": {
         "en": "Combines a bidirectional GRU with graph attention to capture sensor dependencies in industrial power-generation control data; detected 44 of 45 simulated abnormal events with interpretable attention weights.",
         "ko": "양방향 GRU와 그래프 어텐션을 결합해 발전 제어 데이터의 센서 간 의존성을 학습. 시뮬레이션된 45건의 이상 이벤트 중 44건을 탐지하고 어텐션 가중치로 해석 가능성 제공."
       },
       "links": [
-        { "label": "DOI", "href": "https://doi.org/10.1007/s10618-026-01262-3" }
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1007/s10618-026-01262-3"
+        }
       ]
     },
     {
@@ -118,9 +214,15 @@
       "badge": "AWARD",
       "title": "Hybrid Neural Network Model for Anomaly Detection in Implantable Devices Using Graph Attention Networks and Transformers",
       "authors": "<b>D. Kwon</b>, M. Kim, Y. Kang, J. Lee, C. Park",
-      "venue": { "en": "10th International Biomedical Engineering Conference (IBEC 2024)", "ko": "10th International Biomedical Engineering Conference (IBEC 2024)" },
+      "venue": {
+        "en": "10th International Biomedical Engineering Conference (IBEC 2024)",
+        "ko": "10th International Biomedical Engineering Conference (IBEC 2024)"
+      },
       "year": 2024,
-      "note": { "en": "Best Poster Award — Silver", "ko": "Best Poster Award — Silver" },
+      "note": {
+        "en": "Best Poster Award — Silver",
+        "ko": "Best Poster Award — Silver"
+      },
       "links": []
     },
     {
@@ -128,10 +230,16 @@
       "badge": "JOURNAL",
       "title": "Designing a Remote Photoplethysmography-Based Heart Rate Estimation Algorithm During a Treadmill Exercise",
       "authors": "Y. Nam, J. Lee, H. Lee, <b>D. Kwon</b>, M. Yeo, S. Kim, R. Sohn, C. Park",
-      "venue": { "en": "Electronics, vol. 14, no. 5, p. 890", "ko": "Electronics, vol. 14, no. 5, p. 890" },
+      "venue": {
+        "en": "Electronics, vol. 14, no. 5, p. 890",
+        "ko": "Electronics, vol. 14, no. 5, p. 890"
+      },
       "year": 2025,
       "links": [
-        { "label": "DOI", "href": "https://doi.org/10.3390/electronics14050890" }
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.3390/electronics14050890"
+        }
       ]
     },
     {
@@ -139,9 +247,15 @@
       "badge": "AWARD",
       "title": "Enhancing Medical Device Security with GNN-GRU Anomaly Detection Model",
       "authors": "<b>D. Kwon</b>, Y. Kang, C. Park",
-      "venue": { "en": "62nd KOSOMBE Autumn Conference, pp. 204–205", "ko": "제62회 대한의용생체공학회 추계학술대회, pp. 204–205" },
+      "venue": {
+        "en": "62nd KOSOMBE Autumn Conference, pp. 204–205",
+        "ko": "제62회 대한의용생체공학회 추계학술대회, pp. 204–205"
+      },
       "year": 2023,
-      "note": { "en": "Outstanding Paper Award", "ko": "우수논문상" },
+      "note": {
+        "en": "Outstanding Paper Award",
+        "ko": "우수논문상"
+      },
       "links": []
     },
     {
@@ -149,48 +263,84 @@
       "badge": "CONF",
       "title": "Metaverse: Design of the Car Price Prediction Model Through a Machine-learning Approach",
       "authors": "J. Yang, J. Kim, J. Lee, H. Ryu, <b>D. Kwon</b>, S. Yeo, P. Kim, Y. Kim, J. Lim, H. Yoon, C. Park",
-      "venue": { "en": "IEEE MetaCom 2023, pp. 734–737", "ko": "IEEE MetaCom 2023, pp. 734–737" },
+      "venue": {
+        "en": "IEEE MetaCom 2023, pp. 734–737",
+        "ko": "IEEE MetaCom 2023, pp. 734–737"
+      },
       "year": 2023,
       "links": []
     }
   ],
-
   "patents": [
     {
       "status": "registered",
-      "date": { "en": "Apr 2026", "ko": "2026.04" },
-      "title": { "en": "Method for Implantable Medical Device to Detect Anomaly in Real Time", "ko": "이식형 의료기기의 실시간 이상 탐지 방법" },
+      "date": {
+        "en": "Apr 2026",
+        "ko": "2026.04"
+      },
+      "title": {
+        "en": "Method for Implantable Medical Device to Detect Anomaly in Real Time",
+        "ko": "이식형 의료기기의 실시간 이상 탐지 방법"
+      },
       "number": "KR 10-2961984"
     },
     {
       "status": "registered",
-      "date": { "en": "Aug 2025", "ko": "2025.08" },
-      "title": { "en": "GPT API-Based Network Anomaly Detection", "ko": "GPT API 기반 네트워크 이상 탐지" },
+      "date": {
+        "en": "Aug 2025",
+        "ko": "2025.08"
+      },
+      "title": {
+        "en": "GPT API-Based Network Anomaly Detection",
+        "ko": "GPT API 기반 네트워크 이상 탐지"
+      },
       "number": "KR 10-2848814"
     },
     {
       "status": "pending",
-      "date": { "en": "Oct 2025", "ko": "2025.10" },
-      "title": { "en": "System for Anomaly Detection Using a Collaborative Multi-AI Determination Module Based on LLM", "ko": "LLM 기반 협업형 다중 AI 판단 모듈을 이용한 이상 탐지 시스템" },
+      "date": {
+        "en": "Oct 2025",
+        "ko": "2025.10"
+      },
+      "title": {
+        "en": "System for Anomaly Detection Using a Collaborative Multi-AI Determination Module Based on LLM",
+        "ko": "LLM 기반 협업형 다중 AI 판단 모듈을 이용한 이상 탐지 시스템"
+      },
       "number": "KR 10-2025-0160217"
     },
     {
       "status": "pending",
-      "date": { "en": "Aug 2024", "ko": "2024.08" },
-      "title": { "en": "Categorical Data of Networks Based Network Anomaly Detection Apparatus and Method Thereof", "ko": "네트워크 범주형 데이터 기반 네트워크 이상 탐지 장치 및 방법" },
+      "date": {
+        "en": "Aug 2024",
+        "ko": "2024.08"
+      },
+      "title": {
+        "en": "Categorical Data of Networks Based Network Anomaly Detection Apparatus and Method Thereof",
+        "ko": "네트워크 범주형 데이터 기반 네트워크 이상 탐지 장치 및 방법"
+      },
       "number": "KR 10-2024-0110559"
     }
   ],
-
   "experience": [
     {
-      "org": { "en": "Suresoft Technologies", "ko": "슈어소프트테크" },
-      "role": { "en": "AI Engineer, Intelligent Agent Technology Team", "ko": "AI 엔지니어, 지능형 에이전트 기술팀" },
-      "location": { "en": "Seongnam, Korea", "ko": "성남, 대한민국" },
-      "period": { "en": "Dec 2025 – Present", "ko": "2025.12 – 현재" },
+      "org": {
+        "en": "Suresoft Technologies",
+        "ko": "슈어소프트테크"
+      },
+      "role": {
+        "en": "AI Engineer, Intelligent Agent Technology Team",
+        "ko": "AI 엔지니어, 지능형 에이전트 기술팀"
+      },
+      "location": {
+        "en": "Seongnam, Korea",
+        "ko": "성남, 대한민국"
+      },
+      "period": {
+        "en": "Dec 2025 – Present",
+        "ko": "2025.12 – 현재"
+      },
       "current": true,
-      "logo": null,
-      "monogram": "ST",
+      "logo": "assets/img/logos/suresoft.png",
       "bullets": {
         "en": [
           "Developing an AI validation system built on AI-agent architectures for enterprise model verification.",
@@ -205,10 +355,22 @@
       }
     },
     {
-      "org": { "en": "University of Toronto × LG Electronics Toronto AI Lab", "ko": "University of Toronto × LG전자 토론토 AI Lab" },
-      "role": { "en": "Visiting Graduate Researcher", "ko": "방문 대학원 연구원" },
-      "location": { "en": "Toronto, ON, Canada", "ko": "토론토, 캐나다" },
-      "period": { "en": "Jan 2025 – Jul 2025", "ko": "2025.01 – 2025.07" },
+      "org": {
+        "en": "University of Toronto × LG Electronics Toronto AI Lab",
+        "ko": "University of Toronto × LG전자 토론토 AI Lab"
+      },
+      "role": {
+        "en": "Visiting Graduate Researcher",
+        "ko": "방문 대학원 연구원"
+      },
+      "location": {
+        "en": "Toronto, ON, Canada",
+        "ko": "토론토, 캐나다"
+      },
+      "period": {
+        "en": "Jan 2025 – Jul 2025",
+        "ko": "2025.01 – 2025.07"
+      },
       "logo": "assets/img/logos/university-of-toronto.png",
       "logo2": "assets/img/logos/lg-electronics.png",
       "bullets": {
@@ -223,10 +385,22 @@
       }
     },
     {
-      "org": { "en": "Bio-Computing & Machine Learning Lab, Kwangwoon University", "ko": "광운대학교 바이오컴퓨팅·머신러닝 연구실 (BCML)" },
-      "role": { "en": "Research Assistant", "ko": "연구원" },
-      "location": { "en": "Seoul, Korea", "ko": "서울, 대한민국" },
-      "period": { "en": "Aug 2021 – Dec 2025", "ko": "2021.08 – 2025.12" },
+      "org": {
+        "en": "Bio-Computing & Machine Learning Lab, Kwangwoon University",
+        "ko": "광운대학교 바이오컴퓨팅·머신러닝 연구실 (BCML)"
+      },
+      "role": {
+        "en": "Research Assistant",
+        "ko": "연구원"
+      },
+      "location": {
+        "en": "Seoul, Korea",
+        "ko": "서울, 대한민국"
+      },
+      "period": {
+        "en": "Aug 2021 – Dec 2025",
+        "ko": "2021.08 – 2025.12"
+      },
       "logo": "assets/img/logos/kwangwoon-bcml.png",
       "bullets": {
         "en": [
@@ -240,10 +414,22 @@
       }
     },
     {
-      "org": { "en": "Qualcomm Institute, UC San Diego", "ko": "Qualcomm Institute, UC San Diego" },
-      "role": { "en": "AI Development Project Participant, Summer Program", "ko": "AI 개발 프로젝트 참가자, 하계 프로그램" },
-      "location": { "en": "San Diego, CA, USA", "ko": "샌디에이고, 미국" },
-      "period": { "en": "Jul 2022 – Aug 2022", "ko": "2022.07 – 2022.08" },
+      "org": {
+        "en": "Qualcomm Institute, UC San Diego",
+        "ko": "Qualcomm Institute, UC San Diego"
+      },
+      "role": {
+        "en": "AI Development Project Participant, Summer Program",
+        "ko": "AI 개발 프로젝트 참가자, 하계 프로그램"
+      },
+      "location": {
+        "en": "San Diego, CA, USA",
+        "ko": "샌디에이고, 미국"
+      },
+      "period": {
+        "en": "Jul 2022 – Aug 2022",
+        "ko": "2022.07 – 2022.08"
+      },
       "logo": "assets/img/logos/qualcomm-institute.png",
       "bullets": {
         "en": [
@@ -257,69 +443,148 @@
       }
     }
   ],
-
   "education": [
     {
-      "school": { "en": "Kwangwoon University", "ko": "광운대학교" },
-      "degree": { "en": "M.S. in Computer Engineering", "ko": "컴퓨터공학 석사" },
-      "period": { "en": "Mar 2024 – Feb 2026", "ko": "2024.03 – 2026.02" },
-      "detail": { "en": "GPA 4.33 / 4.5 (98.1%)", "ko": "GPA 4.33 / 4.5 (98.1%)" },
+      "school": {
+        "en": "Kwangwoon University",
+        "ko": "광운대학교"
+      },
+      "degree": {
+        "en": "M.S. in Computer Engineering",
+        "ko": "컴퓨터공학 석사"
+      },
+      "period": {
+        "en": "Mar 2024 – Feb 2026",
+        "ko": "2024.03 – 2026.02"
+      },
+      "detail": {
+        "en": "GPA 4.33 / 4.5 (98.1%)",
+        "ko": "GPA 4.33 / 4.5 (98.1%)"
+      },
       "logo": "assets/img/logos/kwangwoon-university.svg"
     },
     {
-      "school": { "en": "University of Toronto", "ko": "University of Toronto" },
-      "degree": { "en": "Graduate Research Program, Mechanical & Industrial Engineering", "ko": "기계·산업공학 대학원 연구 프로그램" },
-      "period": { "en": "Jan 2025 – Jul 2025", "ko": "2025.01 – 2025.07" },
-      "detail": { "en": "GPA 3.68 / 4.0", "ko": "GPA 3.68 / 4.0" },
+      "school": {
+        "en": "University of Toronto",
+        "ko": "University of Toronto"
+      },
+      "degree": {
+        "en": "Graduate Research Program, Mechanical & Industrial Engineering",
+        "ko": "기계·산업공학 대학원 연구 프로그램"
+      },
+      "period": {
+        "en": "Jan 2025 – Jul 2025",
+        "ko": "2025.01 – 2025.07"
+      },
+      "detail": {
+        "en": "GPA 3.68 / 4.0",
+        "ko": "GPA 3.68 / 4.0"
+      },
       "logo": "assets/img/logos/university-of-toronto.png"
     },
     {
-      "school": { "en": "Kwangwoon University", "ko": "광운대학교" },
-      "degree": { "en": "B.S. in Electronics & Communications Engineering", "ko": "전자통신공학 학사" },
-      "period": { "en": "Mar 2019 – Feb 2024", "ko": "2019.03 – 2024.02" },
-      "detail": { "en": "GPA 3.41 / 4.5 (88.1%)", "ko": "GPA 3.41 / 4.5 (88.1%)" },
+      "school": {
+        "en": "Kwangwoon University",
+        "ko": "광운대학교"
+      },
+      "degree": {
+        "en": "B.S. in Electronics & Communications Engineering",
+        "ko": "전자통신공학 학사"
+      },
+      "period": {
+        "en": "Mar 2019 – Feb 2024",
+        "ko": "2019.03 – 2024.02"
+      },
+      "detail": {
+        "en": "GPA 3.41 / 4.5 (88.1%)",
+        "ko": "GPA 3.41 / 4.5 (88.1%)"
+      },
       "logo": "assets/img/logos/kwangwoon-university.svg"
     }
   ],
-
   "awards": [
     {
       "group": "major",
-      "date": { "en": "Aug 2022", "ko": "2022.08" },
-      "title": { "en": "Achievement Award", "ko": "Achievement Award" },
-      "issuer": { "en": "Qualcomm Institute AI Development Project — UC San Diego", "ko": "Qualcomm Institute AI 개발 프로젝트 — UC San Diego" },
+      "date": {
+        "en": "Aug 2022",
+        "ko": "2022.08"
+      },
+      "title": {
+        "en": "Achievement Award",
+        "ko": "Achievement Award"
+      },
+      "issuer": {
+        "en": "Qualcomm Institute AI Development Project — UC San Diego",
+        "ko": "Qualcomm Institute AI 개발 프로젝트 — UC San Diego"
+      },
       "country": "US",
       "image": "assets/img/awards/qualcomm-achievement-2022.jpg"
     },
     {
       "group": "major",
-      "date": { "en": "Dec 2021", "ko": "2021.12" },
-      "title": { "en": "Gold Award (Ministerial Award)", "ko": "금상 (해양수산부 장관상)" },
-      "issuer": { "en": "2021 Smart Maritime Logistics Project — Minister of Oceans and Fisheries", "ko": "2021 스마트 해상물류 프로젝트 — 해양수산부" },
+      "date": {
+        "en": "Dec 2021",
+        "ko": "2021.12"
+      },
+      "title": {
+        "en": "Gold Award (Ministerial Award)",
+        "ko": "금상 (해양수산부 장관상)"
+      },
+      "issuer": {
+        "en": "2021 Smart Maritime Logistics Project — Minister of Oceans and Fisheries",
+        "ko": "2021 스마트 해상물류 프로젝트 — 해양수산부"
+      },
       "country": "KR",
       "image": "assets/img/awards/ministry-award-2021.jpg"
     },
     {
       "group": "academic",
-      "date": { "en": "Nov 2025", "ko": "2025.11" },
-      "title": { "en": "Outstanding Student Paper Award", "ko": "우수 학생 논문상" },
-      "issuer": { "en": "Conference of the Institute of Electronics and Information Engineers (IEIE)", "ko": "대한전자공학회 학술대회" },
+      "date": {
+        "en": "Nov 2025",
+        "ko": "2025.11"
+      },
+      "title": {
+        "en": "Outstanding Student Paper Award",
+        "ko": "우수 학생 논문상"
+      },
+      "issuer": {
+        "en": "Conference of the Institute of Electronics and Information Engineers (IEIE)",
+        "ko": "대한전자공학회 학술대회"
+      },
       "country": "KR",
       "image": null
     },
     {
       "group": "academic",
-      "date": { "en": "Nov 2024", "ko": "2024.11" },
-      "title": { "en": "Best Poster Award (Silver)", "ko": "Best Poster Award (Silver)" },
-      "issuer": { "en": "10th International Biomedical Engineering Conference (IBEC 2024)", "ko": "제10회 국제 의공학 학술대회 (IBEC 2024)" },
+      "date": {
+        "en": "Nov 2024",
+        "ko": "2024.11"
+      },
+      "title": {
+        "en": "Best Poster Award (Silver)",
+        "ko": "Best Poster Award (Silver)"
+      },
+      "issuer": {
+        "en": "10th International Biomedical Engineering Conference (IBEC 2024)",
+        "ko": "제10회 국제 의공학 학술대회 (IBEC 2024)"
+      },
       "country": "KR",
       "image": "assets/img/awards/biomedical-poster-2024.jpg"
     },
     {
       "group": "academic",
-      "date": { "en": "Nov 2023", "ko": "2023.11" },
-      "title": { "en": "Outstanding Paper Award", "ko": "우수논문상" },
-      "issuer": { "en": "Conference of the Korean Society of Medical and Biological Engineering (KOSOMBE)", "ko": "대한의용생체공학회 추계학술대회" },
+      "date": {
+        "en": "Nov 2023",
+        "ko": "2023.11"
+      },
+      "title": {
+        "en": "Outstanding Paper Award",
+        "ko": "우수논문상"
+      },
+      "issuer": {
+        "en": "Conference of the Korean Society of Medical and Biological Engineering (KOSOMBE)",
+        "ko": "대한의용생체공학회 추계학술대회"
+      },
       "country": "KR",
       "image": "assets/img/awards/kosombe-outstanding-2023.jpg"
     }
