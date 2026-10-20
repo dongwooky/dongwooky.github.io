@@ -545,14 +545,14 @@
       },
       "title": {
         "en": "Outstanding Student Paper Award",
-        "ko": "우수 학생 논문상"
+        "ko": "우수학생논문상"
       },
       "issuer": {
-        "en": "Conference of the Institute of Electronics and Information Engineers (IEIE)",
-        "ko": "대한전자공학회 학술대회"
+        "en": "2025 Fall Conference, Institute of Electronics and Information Engineers (IEIE)",
+        "ko": "대한전자공학회 2025년도 추계학술대회"
       },
       "country": "KR",
-      "image": null
+      "image": "assets/img/awards/ieie-student-paper-2025.jpg"
     },
     {
       "group": "academic",
