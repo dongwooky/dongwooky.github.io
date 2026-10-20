@@ -143,8 +143,8 @@
       },
       "year": 2025,
       "note": {
-        "en": "Oral presentation · † Equal contribution · with LG Electronics Toronto AI Lab",
-        "ko": "Oral 발표 · † 공동 제1저자 · LG전자 토론토 AI Lab 협업"
+        "en": "† Equal contribution · Oral presentation · with LG Electronics Toronto AI Lab",
+        "ko": "† 공동 제1저자 · Oral 발표 · LG전자 토론토 AI Lab 협업"
       },
       "summary": {
         "en": "Models agent interactions as a DAG and introduces two process-level metrics, Information Diversity Score and Unnecessary Path Ratio, showing that systems within 2.1% accuracy can differ by 80% in redundant reasoning.",
@@ -154,10 +154,6 @@
         {
           "label": "ACL Anthology",
           "href": "https://aclanthology.org/2025.emnlp-industry.106/"
-        },
-        {
-          "label": "arXiv",
-          "href": "https://arxiv.org/abs/2507.13190"
         }
       ]
     },
