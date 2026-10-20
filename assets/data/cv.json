@@ -21,7 +21,7 @@
     },
     "affiliation": {
       "en": "AI Engineer, Intelligent Agent Technology Team @ Suresoft Technologies · M.S. Computer Engineering, Kwangwoon University · Visiting Researcher @ University of Toronto × LG Electronics Toronto AI Lab",
-      "ko": "Suresoft Technologies 지능형 에이전트 기술팀 AI 엔지니어 · 광운대학교 컴퓨터공학 석사 · University of Toronto × LG전자 토론토 AI Lab 방문 연구원"
+      "ko": "슈어소프트테크 지능형 에이전트 기술팀 AI 엔지니어 · 광운대학교 컴퓨터공학 석사 · University of Toronto × LG전자 토론토 AI Lab 방문 연구원"
     },
     "email": "tomiyadragon@gmail.com",
     "location": {
@@ -60,7 +60,7 @@
       "value": "auto:patents.registered",
       "label": {
         "en": "Registered patents (+{pending} pending)",
-        "ko": "등록 특허 (출원 {pending}건 추가)"
+        "ko": "등록 특허 (출원 중 {pending}건)"
       },
       "href": "#patents"
     },
@@ -68,7 +68,7 @@
       "value": "auto:publications",
       "label": {
         "en": "Peer-reviewed publications",
-        "ko": "동료 심사 논문"
+        "ko": "학술 논문"
       },
       "href": "#publications"
     },
@@ -148,7 +148,7 @@
       },
       "summary": {
         "en": "Models agent interactions as a DAG and introduces two process-level metrics, Information Diversity Score and Unnecessary Path Ratio, showing that systems within 2.1% accuracy can differ by 80% in redundant reasoning.",
-        "ko": "에이전트 간 상호작용을 DAG로 모델링하고 프로세스 수준 지표(정보 다양성 점수, 불필요 경로 비율)를 제안. 정확도 차이가 2.1%에 불과한 시스템도 중복 추론은 80%까지 차이 남을 보임."
+        "ko": "에이전트 간 상호작용을 DAG로 모델링하고 프로세스 수준 지표(정보 다양성 점수, 불필요 경로 비율)를 제안. 정확도 차이가 2.1%에 불과한 시스템도 중복 추론은 80%까지 차이 날 수 있음을 보임."
       },
       "links": [
         {
@@ -331,7 +331,7 @@
       },
       "role": {
         "en": "Visiting Graduate Researcher",
-        "ko": "방문 대학원 연구원"
+        "ko": "방문 연구원"
       },
       "location": {
         "en": "Toronto, ON, Canada",
@@ -390,7 +390,7 @@
       },
       "role": {
         "en": "AI Development Project Participant, Summer Program",
-        "ko": "AI 개발 프로젝트 참가자, 하계 프로그램"
+        "ko": "하계 프로그램 AI 개발 프로젝트 참가"
       },
       "location": {
         "en": "San Diego, CA, USA",
@@ -552,7 +552,7 @@
         "ko": "우수논문상"
       },
       "issuer": {
-        "en": "Conference of the Korean Society of Medical and Biological Engineering (KOSOMBE)",
+        "en": "Autumn Conference of the Korean Society of Medical and Biological Engineering (KOSOMBE)",
         "ko": "대한의용생체공학회 추계학술대회"
       },
       "country": "KR",
