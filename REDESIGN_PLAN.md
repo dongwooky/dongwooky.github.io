@@ -190,5 +190,5 @@ dongwooky.github.io/
 ## 9. 할 일 (TODO)
 
 - [x] IEIE 2025 우수학생논문상 상장 → `assets/img/awards/ieie-student-paper-2025.jpg` (2026-10-20)
-- [ ] **특허 한글 명칭**: 출원 `10-2025-0160217` (LLM 기반 협업형 다중 AI 판단 모듈) 공식 명칭 남음 — 나머지 3건은 KIPRIS 기준으로 반영 완료 (2026-10-20)
+- [x] 특허 한글 명칭 4건 모두 공식 명칭으로 반영 (KIPRIS + 출원번호통지서 기준, 2026-10-20)
 - [x] 슈어소프트테크 로고 → `assets/img/logos/suresoft.png` (2026-10-20)
