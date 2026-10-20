@@ -188,7 +188,7 @@
     },
     {
       "featured": true,
-      "badge": "DMKD",
+      "badge": "JOURNAL",
       "title": "Graph-Enhanced Bidirectional GRU for Anomaly Detection in Power Generation Environments",
       "authors": "<b>D. Kwon</b>, Y. Kang, J. Lee, Y. Nam, J. Won, K. K. Kim, D. D. Kim, C. Park",
       "venue": {
@@ -212,24 +212,8 @@
       ]
     },
     {
-      "featured": true,
-      "badge": "IBEC",
-      "title": "Hybrid Neural Network Model for Anomaly Detection in Implantable Devices Using Graph Attention Networks and Transformers",
-      "authors": "<b>D. Kwon</b>, M. Kim, Y. Kang, J. Lee, C. Park",
-      "venue": {
-        "en": "10th International Biomedical Engineering Conference (IBEC 2024)",
-        "ko": "10th International Biomedical Engineering Conference (IBEC 2024)"
-      },
-      "year": 2024,
-      "note": {
-        "en": "Best Poster Award (Silver)",
-        "ko": "Best Poster Award (Silver)"
-      },
-      "links": []
-    },
-    {
       "featured": false,
-      "badge": "Electronics",
+      "badge": "JOURNAL",
       "title": "Designing a Remote Photoplethysmography-Based Heart Rate Estimation Algorithm During a Treadmill Exercise",
       "authors": "Y. Nam, J. Lee, H. Lee, <b>D. Kwon</b>, M. Yeo, S. Kim, R. Sohn, C. Park",
       "venue": {
@@ -247,22 +231,6 @@
         "en": "",
         "ko": "SCIE"
       }
-    },
-    {
-      "featured": false,
-      "badge": "KOSOMBE",
-      "title": "Enhancing Medical Device Security with GNN-GRU Anomaly Detection Model",
-      "authors": "<b>D. Kwon</b>, Y. Kang, C. Park",
-      "venue": {
-        "en": "62nd KOSOMBE Autumn Conference, pp. 204–205",
-        "ko": "제62회 대한의용생체공학회 추계학술대회, pp. 204–205"
-      },
-      "year": 2023,
-      "note": {
-        "en": "Outstanding Paper Award",
-        "ko": "우수논문상"
-      },
-      "links": []
     },
     {
       "featured": false,

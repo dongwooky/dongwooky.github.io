@@ -271,7 +271,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 /* tiers: filled = top-tier NLP venues, outlined accent = journals, neutral = other conferences */
 .badge-EMNLP, .badge-ACL { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
-.badge-DMKD, .badge-Electronics { border-color: var(--accent); color: var(--accent); }
+.badge-JOURNAL { border-color: var(--accent); color: var(--accent); }
 .pub h3 { font-size: 1.02rem; font-weight: 600; line-height: 1.35; }
 .pub .authors { color: var(--text-2); font-size: 14px; margin-top: 6px; }
 .pub .authors b { color: var(--text); font-weight: 700; }
