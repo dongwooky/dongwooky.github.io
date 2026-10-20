@@ -280,7 +280,7 @@
       },
       "title": {
         "en": "Method for Implantable Medical Device to Detect Anomaly in Real Time",
-        "ko": "이식형 의료기기의 실시간 이상 탐지 방법"
+        "ko": "신체 이식형 의료 디바이스가 실시간으로 이상을 감지하기 위한 방법"
       },
       "number": "KR 10-2961984"
     },
@@ -292,7 +292,7 @@
       },
       "title": {
         "en": "GPT API-Based Network Anomaly Detection",
-        "ko": "GPT API 기반 네트워크 이상 탐지"
+        "ko": "GPT API를 사용한 네트워크 이상치 탐지 방법"
       },
       "number": "KR 10-2848814"
     },
@@ -316,7 +316,7 @@
       },
       "title": {
         "en": "Categorical Data of Networks Based Network Anomaly Detection Apparatus and Method Thereof",
-        "ko": "네트워크 범주형 데이터 기반 네트워크 이상 탐지 장치 및 방법"
+        "ko": "네트워크의 범주형 데이터를 이용한 네트워크 이상 탐지 장치 및 그 방법"
       },
       "number": "KR 10-2024-0110559"
     }

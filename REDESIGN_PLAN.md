@@ -190,5 +190,5 @@ dongwooky.github.io/
 ## 9. 할 일 (TODO)
 
 - [ ] **IEIE 2025 우수 학생 논문상 상장 사진** 받으면 `assets/img/awards/`에 넣고 `cv.json`의 `awards` 항목 `image` 연결
-- [ ] **특허 한글 명칭** 받으면 `cv.json`의 `patents[*].title.ko` 교체 (현재는 영문 명칭 의역)
+- [ ] **특허 한글 명칭**: 출원 `10-2025-0160217` (LLM 기반 협업형 다중 AI 판단 모듈) 공식 명칭 남음 — 나머지 3건은 KIPRIS 기준으로 반영 완료 (2026-10-20)
 - [x] 슈어소프트테크 로고 → `assets/img/logos/suresoft.png` (2026-10-20)
