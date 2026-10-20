@@ -132,7 +132,7 @@
   "publications": [
     {
       "featured": true,
-      "badge": "ORAL",
+      "badge": "EMNLP",
       "title": "GEMMAS: Graph-based Evaluation Metrics for Multi Agent Systems",
       "authors": "J. Lee†, R. Chang†, <b>D. Kwon</b>†, H. Singh, N. Verma",
       "venue": {
@@ -141,8 +141,8 @@
       },
       "year": 2025,
       "note": {
-        "en": "† Equal contribution · with LG Electronics Toronto AI Lab",
-        "ko": "† 공동 제1저자 · LG전자 토론토 AI Lab 협업"
+        "en": "Oral presentation · † Equal contribution · with LG Electronics Toronto AI Lab",
+        "ko": "Oral 발표 · † 공동 제1저자 · LG전자 토론토 AI Lab 협업"
       },
       "summary": {
         "en": "Models agent interactions as a DAG and introduces process-level metrics — Information Diversity Score and Unnecessary Path Ratio — showing that systems within 2.1% accuracy can differ by 80% in redundant reasoning.",
@@ -211,7 +211,7 @@
     },
     {
       "featured": true,
-      "badge": "AWARD",
+      "badge": "IBEC",
       "title": "Hybrid Neural Network Model for Anomaly Detection in Implantable Devices Using Graph Attention Networks and Transformers",
       "authors": "<b>D. Kwon</b>, M. Kim, Y. Kang, J. Lee, C. Park",
       "venue": {
@@ -244,7 +244,7 @@
     },
     {
       "featured": false,
-      "badge": "AWARD",
+      "badge": "KOSOMBE",
       "title": "Enhancing Medical Device Security with GNN-GRU Anomaly Detection Model",
       "authors": "<b>D. Kwon</b>, Y. Kang, C. Park",
       "venue": {
@@ -260,7 +260,7 @@
     },
     {
       "featured": false,
-      "badge": "CONF",
+      "badge": "IEEE",
       "title": "Metaverse: Design of the Car Price Prediction Model Through a Machine-learning Approach",
       "authors": "J. Yang, J. Kim, J. Lee, H. Ryu, <b>D. Kwon</b>, S. Yeo, P. Kim, Y. Kim, J. Lim, H. Yoon, C. Park",
       "venue": {

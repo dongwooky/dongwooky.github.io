@@ -262,9 +262,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   padding: 5px 8px; border-radius: 6px; white-space: nowrap; margin-top: 2px;
   border: 1px solid var(--border-strong); color: var(--text-2);
 }
-.badge-ORAL, .badge-ACL { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
+.badge-EMNLP, .badge-ACL { background: var(--accent); color: var(--accent-ink); border-color: transparent; }
 .badge-JOURNAL { border-color: var(--accent); color: var(--accent); }
-.badge-AWARD { background: var(--amber-soft); color: var(--amber); border-color: transparent; }
 .pub h3 { font-size: 1.02rem; font-weight: 600; line-height: 1.35; }
 .pub .authors { color: var(--text-2); font-size: 14px; margin-top: 6px; }
 .pub .authors b { color: var(--text); font-weight: 700; }
