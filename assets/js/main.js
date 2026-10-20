@@ -97,7 +97,7 @@
     document.querySelectorAll('[data-link="linkedin"]').forEach((a) => (a.href = p.links.linkedin));
     document.querySelectorAll('[data-link="email"]').forEach((a) => { a.href = `mailto:${p.email}`; if (a.classList.contains('email')) a.textContent = p.email; });
     document.getElementById('about-text').textContent = t(p.about);
-    document.title = `${t(p.name)} — ${t(p.role)}`;
+    document.title = `${t(p.name)} · ${t(p.role)}`;
   }
 
   function renderStats(stats) {
@@ -219,7 +219,7 @@
       const inner = `<div><h4>${esc(t(a.title))}</h4><div class="issuer">${esc(t(a.issuer))}</div></div>
         <div class="date">${esc(t(a.date))}<span class="flag">${FLAGS[a.country] || ''}</span></div>`;
       return a.image
-        ? `<button class="award clickable" type="button" data-img="${esc(a.image)}" data-cap="${esc(t(a.title))} — ${esc(t(a.issuer))}">${inner}</button>`
+        ? `<button class="award clickable" type="button" data-img="${esc(a.image)}" data-cap="${esc(t(a.title))} · ${esc(t(a.issuer))}">${inner}</button>`
         : `<div class="award">${inner}</div>`;
     };
     document.getElementById('awards-major').innerHTML = items.filter((a) => a.group === 'major').map(row).join('');

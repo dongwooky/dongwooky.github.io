@@ -13,7 +13,7 @@
       "ko": "AI 리서치 엔지니어"
     },
     "tagline": {
-      "en": "Building reliable, secure autonomous AI — from multi-agent LLM systems to anomaly detection for infrastructure that cannot fail.",
+      "en": "Building reliable, secure autonomous AI: from multi-agent LLM systems to anomaly detection for infrastructure that cannot fail.",
       "ko": "멀티 에이전트 LLM 시스템부터 핵심 인프라 이상 탐지까지, 신뢰할 수 있고 안전한 자율 AI를 만듭니다."
     },
     "affiliation": {
@@ -32,7 +32,7 @@
       "cv": "Dongwook_Kwon_CV.pdf"
     },
     "about": {
-      "en": "I work at the intersection of large language models, multi-agent systems, and AI-driven anomaly detection for critical infrastructure. My research has been published in top-tier venues — an Oral at EMNLP 2025 and a paper at ACL 2026 (both Industry Tracks, with LG Electronics) — and a first-authored journal article in Data Mining and Knowledge Discovery on anomaly detection for power-generation control systems. I hold registered patents in network and medical-device anomaly detection, and I engineered and delivered an agent-based codebase for a mission-critical vehicle control data project for Hyundai Motor Company.",
+      "en": "I work at the intersection of large language models, multi-agent systems, and AI-driven anomaly detection for critical infrastructure. My research has been published in top-tier venues, including an Oral at EMNLP 2025 and a paper at ACL 2026 (both Industry Tracks, with LG Electronics), as well as a first-authored journal article in Data Mining and Knowledge Discovery on anomaly detection for power-generation control systems. I hold registered patents in network and medical-device anomaly detection, and I engineered and delivered an agent-based codebase for a mission-critical vehicle control data project for Hyundai Motor Company.",
       "ko": "대규모 언어 모델(LLM), 멀티 에이전트 시스템, 그리고 핵심 인프라를 위한 AI 기반 이상 탐지의 교차점에서 연구하고 개발합니다. LG전자와 협업한 연구가 EMNLP 2025 Oral과 ACL 2026(모두 Industry Track)에 채택되었고, 발전소 제어 시스템 이상 탐지 연구를 제1저자로 Data Mining and Knowledge Discovery 저널에 게재했습니다. 네트워크 및 의료기기 이상 탐지 분야의 등록 특허를 보유하고 있으며, 현대자동차의 미션 크리티컬 차량 제어 데이터 프로젝트를 위한 에이전트 기반 코드베이스를 설계·납품했습니다."
     }
   },
@@ -87,8 +87,8 @@
         "ko": "LLM · 멀티 에이전트 시스템"
       },
       "desc": {
-        "en": "Evaluation frameworks and cost-aware architectures for agentic AI — graph-based process metrics (GEMMAS) and multi-agent deliberation inside LLM cascades (CascadeDebate). Now building agent-based AI validation systems in industry.",
-        "ko": "에이전트 AI를 위한 평가 프레임워크와 비용 인지 아키텍처 연구 — 그래프 기반 프로세스 지표(GEMMAS), LLM 캐스케이드 내 멀티 에이전트 숙의(CascadeDebate). 현재 산업 현장에서 에이전트 기반 AI 검증 시스템을 개발 중입니다."
+        "en": "Evaluation frameworks and cost-aware architectures for agentic AI: graph-based process metrics (GEMMAS) and multi-agent deliberation inside LLM cascades (CascadeDebate). Now building agent-based AI validation systems in industry.",
+        "ko": "에이전트 AI를 위한 평가 프레임워크와 비용 인지 아키텍처 연구. 그래프 기반 프로세스 지표(GEMMAS), LLM 캐스케이드 내 멀티 에이전트 숙의(CascadeDebate)를 제안했고, 현재 산업 현장에서 에이전트 기반 AI 검증 시스템을 개발 중입니다."
       },
       "tags": [
         "EMNLP 2025 Oral",
@@ -103,8 +103,8 @@
         "ko": "핵심 인프라 이상 탐지"
       },
       "desc": {
-        "en": "Graph neural networks and recurrent models for multivariate time-series from power-generation control systems and nuclear environments — interpretable, prediction-based detection of rare faults.",
-        "ko": "발전소 제어 시스템과 원자력 환경의 다변량 시계열을 위한 그래프 신경망·순환 모델 연구 — 해석 가능한 예측 기반 희귀 고장 탐지."
+        "en": "Graph neural networks and recurrent models for multivariate time-series from power-generation control systems and nuclear environments, aimed at interpretable, prediction-based detection of rare faults.",
+        "ko": "발전소 제어 시스템과 원자력 환경의 다변량 시계열을 위한 그래프 신경망·순환 모델 연구. 해석 가능한 예측 기반 방식으로 희귀 고장을 탐지합니다."
       },
       "tags": [
         "DMKD 2026",
@@ -119,8 +119,8 @@
         "ko": "의료기기 · 네트워크 보안"
       },
       "desc": {
-        "en": "Real-time anomaly detection for implantable medical devices and GPT-API-based network intrusion detection — research that became registered patents and award-winning papers.",
-        "ko": "이식형 의료기기 실시간 이상 탐지와 GPT API 기반 네트워크 침입 탐지 — 등록 특허와 수상 논문으로 이어진 연구."
+        "en": "Real-time anomaly detection for implantable medical devices and GPT-API-based network intrusion detection. This research became registered patents and award-winning papers.",
+        "ko": "이식형 의료기기 실시간 이상 탐지와 GPT API 기반 네트워크 침입 탐지 연구. 등록 특허와 수상 논문으로 이어졌습니다."
       },
       "tags": [
         "2 Registered Patents",
@@ -145,7 +145,7 @@
         "ko": "Oral 발표 · † 공동 제1저자 · LG전자 토론토 AI Lab 협업"
       },
       "summary": {
-        "en": "Models agent interactions as a DAG and introduces process-level metrics — Information Diversity Score and Unnecessary Path Ratio — showing that systems within 2.1% accuracy can differ by 80% in redundant reasoning.",
+        "en": "Models agent interactions as a DAG and introduces two process-level metrics, Information Diversity Score and Unnecessary Path Ratio, showing that systems within 2.1% accuracy can differ by 80% in redundant reasoning.",
         "ko": "에이전트 간 상호작용을 DAG로 모델링하고 프로세스 수준 지표(정보 다양성 점수, 불필요 경로 비율)를 제안. 정확도 차이가 2.1%에 불과한 시스템도 중복 추론은 80%까지 차이 남을 보임."
       },
       "links": [
@@ -174,7 +174,7 @@
         "ko": "† 공동 제1저자 · LG전자 토론토 AI Lab 협업"
       },
       "summary": {
-        "en": "Places small agent ensembles at each escalation point of an LLM cascade so uncertain queries are resolved by deliberation before calling a costlier model — up to 26.75% over single-model cascades across five benchmarks.",
+        "en": "Places small agent ensembles at each escalation point of an LLM cascade so uncertain queries are resolved by deliberation before calling a costlier model, gaining up to 26.75% over single-model cascades across five benchmarks.",
         "ko": "LLM 캐스케이드의 각 상향 지점에 소규모 에이전트 앙상블을 두어, 불확실한 질의를 더 비싼 모델 호출 전에 숙의로 해결. 5개 벤치마크에서 단일 모델 캐스케이드 대비 최대 26.75% 향상."
       },
       "links": [
@@ -220,8 +220,8 @@
       },
       "year": 2024,
       "note": {
-        "en": "Best Poster Award — Silver",
-        "ko": "Best Poster Award — Silver"
+        "en": "Best Poster Award (Silver)",
+        "ko": "Best Poster Award (Silver)"
       },
       "links": []
     },
@@ -514,8 +514,8 @@
         "ko": "Achievement Award"
       },
       "issuer": {
-        "en": "Qualcomm Institute AI Development Project — UC San Diego",
-        "ko": "Qualcomm Institute AI 개발 프로젝트 — UC San Diego"
+        "en": "Qualcomm Institute AI Development Project, UC San Diego",
+        "ko": "Qualcomm Institute AI 개발 프로젝트, UC San Diego"
       },
       "country": "US",
       "image": "assets/img/awards/qualcomm-achievement-2022.jpg"
@@ -531,8 +531,8 @@
         "ko": "금상 (해양수산부 장관상)"
       },
       "issuer": {
-        "en": "2021 Smart Maritime Logistics Project — Minister of Oceans and Fisheries",
-        "ko": "2021 스마트 해상물류 프로젝트 — 해양수산부"
+        "en": "2021 Smart Maritime Logistics Project, Minister of Oceans and Fisheries",
+        "ko": "2021 스마트 해상물류 프로젝트, 해양수산부"
       },
       "country": "KR",
       "image": "assets/img/awards/ministry-award-2021.jpg"
