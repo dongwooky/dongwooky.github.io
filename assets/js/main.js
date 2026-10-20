@@ -8,7 +8,7 @@
     en: {
       'nav.about': 'About', 'nav.publications': 'Publications', 'nav.patents': 'Patents',
       'nav.experience': 'Experience', 'nav.education': 'Education', 'nav.awards': 'Awards', 'nav.contact': 'Contact',
-      'hero.cv': 'Download CV', 'hero.email': 'Email me', 'hero.chip': 'Open to research roles · US / KR',
+      'hero.cv': 'Download CV', 'hero.email': 'Email me',
       'about.title': 'About & Research Focus', 'about.sub': 'Three threads that run through my work.',
       'pubs.title': 'Selected Publications', 'pubs.sub': 'Co-first-authored work with LG Electronics at EMNLP and ACL, and a first-authored journal article in DMKD.',
       'pubs.more': 'Show all publications', 'pubs.less': 'Show fewer',
@@ -25,7 +25,7 @@
     ko: {
       'nav.about': '소개', 'nav.publications': '논문', 'nav.patents': '특허',
       'nav.experience': '경력', 'nav.education': '학력', 'nav.awards': '수상', 'nav.contact': '연락',
-      'hero.cv': 'CV 다운로드', 'hero.email': '이메일 보내기', 'hero.chip': '연구직 · 박사과정 기회 환영',
+      'hero.cv': 'CV 다운로드', 'hero.email': '이메일 보내기',
       'about.title': '소개 & 연구 분야', 'about.sub': '제 연구를 관통하는 세 가지 축입니다.',
       'pubs.title': '대표 논문', 'pubs.sub': 'LG전자와 협업한 EMNLP·ACL 공동 제1저자 논문과 DMKD 제1저자 저널 논문.',
       'pubs.more': '전체 논문 보기', 'pubs.less': '접기',

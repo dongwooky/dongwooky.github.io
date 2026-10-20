@@ -209,14 +209,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   content: ""; position: absolute; inset: -14px; border-radius: 28px; z-index: -1;
   background: radial-gradient(60% 60% at 30% 20%, var(--accent-soft), transparent 70%);
 }
-.hero-photo .chip {
-  position: absolute; left: 50%; bottom: -14px; transform: translateX(-50%);
-  background: var(--surface); border: 1px solid var(--border-strong); border-radius: 999px;
-  padding: 8px 14px; font-size: 12px; font-family: var(--font-mono); white-space: nowrap;
-  display: none; align-items: center; gap: 8px; box-shadow: var(--shadow);
-}
-@media (min-width: 860px) { .hero-photo .chip { display: inline-flex; } }
-.hero-photo .chip i { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px var(--green-soft); }
 
 /* ---------- impact strip ---------- */
 .impact { position: relative; z-index: 1; margin-top: 8px; }
