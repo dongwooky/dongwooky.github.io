@@ -29,7 +29,7 @@
       'about.title': '소개 & 연구 분야', 'about.sub': '제 연구를 관통하는 세 가지 축입니다.',
       'pubs.title': '대표 논문', 'pubs.sub': 'LG전자와 협업한 EMNLP·ACL 공동 제1저자 논문과 SCIE 저널 제1저자 논문.',
       'pubs.more': '전체 논문 보기', 'pubs.less': '접기',
-      'patents.title': '특허', 'patents.sub': '국내 등록 2건, 출원 중 2건.',
+      'patents.title': '특허', 'patents.sub': '국내 등록 2건, 출원 2건.',
       'exp.title': '경력', 'exp.sub': '산업계 및 연구 경력.',
       'edu.title': '학력', 'edu.sub': '',
       'awards.title': '수상 및 표창', 'awards.sub': '수상 항목을 클릭하면 상장을 볼 수 있습니다.',
@@ -177,7 +177,7 @@
     document.getElementById('patent-grid').innerHTML = items.map((p) => `
       <article class="patent">
         <div class="patent-top">
-          <span class="status status-${esc(p.status)}">${p.status === 'registered' ? (lang === 'ko' ? '등록' : 'REGISTERED') : (lang === 'ko' ? '출원 중' : 'PENDING')}</span>
+          <span class="status status-${esc(p.status)}">${p.status === 'registered' ? (lang === 'ko' ? '등록' : 'REGISTERED') : (lang === 'ko' ? '출원' : 'PENDING')}</span>
           <span class="date">${esc(t(p.date))}</span>
         </div>
         <h3>${esc(t(p.title))}</h3>

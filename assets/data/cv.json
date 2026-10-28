@@ -60,7 +60,7 @@
       "value": "auto:patents.registered",
       "label": {
         "en": "Registered patents (+{pending} pending)",
-        "ko": "등록 특허 (출원 중 {pending}건)"
+        "ko": "등록 특허 (출원 {pending}건)"
       },
       "href": "#patents"
     },
