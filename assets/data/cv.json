@@ -20,8 +20,8 @@
       "ko": "멀티 에이전트 LLM 시스템부터 핵심 인프라 이상 탐지까지, 신뢰할 수 있고 안전한 자율 AI를 만듭니다."
     },
     "affiliation": {
-      "en": "AI Engineer, Intelligent Agent Technology Team @ Suresoft Technologies · M.S. Computer Engineering, Kwangwoon University · Visiting Researcher @ LG Electronics Canada × University of Toronto",
-      "ko": "슈어소프트테크 지능형 에이전트 기술팀 AI 엔지니어 · 광운대학교 컴퓨터공학 석사 · LG전자 캐나다 × University of Toronto 방문 연구원"
+      "en": "AI Engineer, Intelligent Agent Technology Team @ Suresoft Technologies · M.S. Computer Engineering, Kwangwoon University · Visiting Researcher @ University of Toronto × LG Electronics Toronto AI Lab",
+      "ko": "슈어소프트테크 지능형 에이전트 기술팀 AI 엔지니어 · 광운대학교 컴퓨터공학 석사 · University of Toronto × LG전자 토론토 AI Lab 방문 연구원"
     },
     "email": "tomiyadragon@gmail.com",
     "location": {
@@ -143,8 +143,8 @@
       },
       "year": 2025,
       "note": {
-        "en": "† Equal contribution · Oral presentation · with LG Electronics Canada",
-        "ko": "† 공동 제1저자 · Oral 발표 · LG전자 캐나다 협업"
+        "en": "† Equal contribution · Oral presentation · with LG Electronics Toronto AI Lab",
+        "ko": "† 공동 제1저자 · Oral 발표 · LG전자 토론토 AI Lab 협업"
       },
       "summary": {
         "en": "Models agent interactions as a DAG and introduces two process-level metrics, Information Diversity Score and Unnecessary Path Ratio, showing that systems within 2.1% accuracy can differ by 80% in redundant reasoning.",
@@ -168,8 +168,8 @@
       },
       "year": 2026,
       "note": {
-        "en": "† Equal contribution · with LG Electronics Canada",
-        "ko": "† 공동 제1저자 · LG전자 캐나다 협업"
+        "en": "† Equal contribution · with LG Electronics Toronto AI Lab",
+        "ko": "† 공동 제1저자 · LG전자 토론토 AI Lab 협업"
       },
       "summary": {
         "en": "Places small agent ensembles at each escalation point of an LLM cascade so uncertain queries are resolved by deliberation before calling a costlier model, gaining up to 26.75% over single-model cascades across five benchmarks.",
@@ -326,11 +326,11 @@
     },
     {
       "org": {
-        "en": "LG Electronics Canada (with University of Toronto)",
-        "ko": "LG전자 캐나다 (University of Toronto 협력)"
+        "en": "University of Toronto × LG Electronics Toronto AI Lab",
+        "ko": "University of Toronto × LG전자 토론토 AI Lab"
       },
       "role": {
-        "en": "Visiting Researcher",
+        "en": "Visiting Graduate Researcher",
         "ko": "방문 연구원"
       },
       "location": {
@@ -341,8 +341,8 @@
         "en": "Jan 2025 – Jul 2025",
         "ko": "2025.01 – 2025.07"
       },
-      "logo": "assets/img/logos/lg-electronics.png",
-      "logo2": "assets/img/logos/university-of-toronto.png",
+      "logo": "assets/img/logos/university-of-toronto.png",
+      "logo2": "assets/img/logos/lg-electronics.png",
       "bullets": {
         "en": [
           "Built an LLM-driven assessment framework for evaluating the performance of agentic AI systems.",
